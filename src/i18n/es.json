@@ -1,0 +1,156 @@
+{
+  "LanguageToggle": {
+    "tooltip": "Cambiar a Inglés"
+  },
+  "Header": {
+    "Home": "Inicio",
+    "About": "Sobre mí",
+    "Services": "Servicios",
+    "Experience": "Experiencia",
+    "Portfolio": "Portafolio",
+    "Contact": "Contacto"
+  },
+  "Home": {
+    "Title": "Hola, soy Carlos",
+    "Description": "Creo sitios web rápidos y responsivos, y aplicaciones web a medida que ayudan a las empresas a crecer en línea.",
+    "Badge": "✨ Construyamos algo increíble",
+    "Hire": "Contrátame"
+  },
+  "About": {
+    "Title": "Sobre Mí",
+    "Description": "Hola, soy Carlos, desarrollador full stack de aplicaciones web y móviles, con base en la Ciudad de México. Me especializo en construir soluciones escalables y de alto rendimiento, con código limpio y un fuerte enfoque en la experiencia del usuario.\n\nHe trabajado en empresas como The Home Depot, Indra y Tich Solutions, participando en proyectos que van desde plataformas de comercio electrónico hasta sistemas empresariales. He liderado equipos frontend, colaborado en entornos internacionales y desarrollado componentes reutilizables y listos para producción usando tecnologías como React, Next.js, Node.js, TypeScript, GraphQL y SCSS.\n\nMe importa la calidad del código, el rendimiento y el diseño. Disfruto resolver problemas complejos y dar vida a ideas a través de soluciones bien pensadas, eficientes y mantenibles.\n\nConstruyamos algo increíble juntos."
+  },
+  "Services": {
+    "Title": "Servicios",
+    "Services": [
+      {
+        "id": "1",
+        "title": "Desarrollo de Aplicaciones Web",
+        "desc": "Desarrollo aplicaciones web modernas, escalables y responsivas con tecnologías como React, Next.js y TypeScript, optimizadas para rendimiento y SEO."
+      },
+      {
+        "id": "2",
+        "title": "Desarrollo de Aplicaciones Móviles",
+        "desc": "Creo apps móviles para iOS y Android usando React Native, enfocadas en velocidad, experiencia de usuario fluida y compatibilidad entre dispositivos."
+      },
+      {
+        "id": "3",
+        "title": "Diseño de Interfaces y Arquitectura Frontend",
+        "desc": "Construyo interfaces accesibles, reutilizables y bien estructuradas con SCSS, Tailwind o styled-components. Implemento patrones escalables y diseño centrado en el usuario."
+      },
+      {
+        "id": "4",
+        "title": "APIs Backend e Integración con Bases de Datos",
+        "desc": "Desarrollo APIs REST y GraphQL con Node.js, Express, MongoDB o Firebase, conectando frontend y backend de forma eficiente y segura."
+      },
+      {
+        "id": "5",
+        "title": "Landing Pages y Portafolios Personalizados",
+        "desc": "Páginas web optimizadas, responsivas y listas para posicionamiento SEO. Ideales para proyectos personales, negocios o marcas profesionales."
+      },
+      {
+        "id": "6",
+        "title": "Paneles de Administración y CMS Personalizados",
+        "desc": "Desarrollo paneles administrativos o integro CMS sin código para que puedas gestionar tu contenido fácilmente sin depender de un desarrollador."
+      }
+    ]
+  },
+  "Experience": {
+    "Title": "Experiencia",
+    "List": [
+      {
+        "id": "THD",
+        "date": "Sep 2024 - Feb 2025",
+        "role": "Desarrollador Frontend",
+        "company": "The Home Depot (a través de The Adecco Group)",
+        "descriptions": [
+          {
+            "id": "THD1",
+            "desc": "Contribuí al desarrollo de funcionalidades de comercio electrónico orientadas al cliente para el mercado de EE. UU., utilizando React, Node.js, GraphQL, Apollo y SCSS."
+          },
+          {
+            "id": "THD2",
+            "desc": "Desarrollé componentes de interfaz de usuario accesibles y responsivos siguiendo buenas prácticas."
+          },
+          {
+            "id": "THD3",
+            "desc": "Participé en flujos de trabajo ágiles, reuniones diarias y planeación de sprints usando Jira y metodología Scrum."
+          },
+          {
+            "id": "THD4",
+            "desc": "Colaboré con equipos internacionales en inglés para asegurar una entrega coherente en todos los mercados."
+          }
+        ]
+      },
+      {
+        "id": "Idr",
+        "date": "Oct 2021 – Sep 2024",
+        "role": "Ingeniero Líder de Software",
+        "company": "Indra",
+        "descriptions": [
+          {
+            "id": "Idr1",
+            "desc": "Lideré un equipo frontend de 7 desarrolladores en múltiples proyectos para clientes como Telcel, Banco Sabadell y Banco Caminos."
+          },
+          {
+            "id": "Idr2",
+            "desc": "Desarrollé y mantuve aplicaciones SPA utilizando Angular, React, Redux, NgRx y TypeScript."
+          },
+          {
+            "id": "Idr3",
+            "desc": "Supervisé revisiones de código e implementé pruebas automatizadas con Jest y Jasmine."
+          },
+          {
+            "id": "Idr4",
+            "desc": "Trabajé en conjunto con diseñadores e ingenieros backend para asegurar una arquitectura limpia e integraciones robustas con APIs."
+          }
+        ]
+      },
+      {
+        "id": "TchS",
+        "date": "Jul 2020 – Jul 2021",
+        "role": "Desarrollador Full Stack",
+        "company": "Tich Solutions",
+        "descriptions": [
+          {
+            "id": "TchS1",
+            "desc": "Desarrollé aplicaciones web personalizadas con React y Angular, enfocándome en el rendimiento y la reutilización de componentes."
+          },
+          {
+            "id": "TchS2",
+            "desc": "Implementé autenticación con inicio de sesión único (SSO) usando JSON Web Tokens (JWT)."
+          },
+          {
+            "id": "TchS3",
+            "desc": "Integré servicios backend y soluciones en la nube con el frontend."
+          },
+          {
+            "id": "TchS4",
+            "desc": "Contribuí a la planificación y entrega de proyectos en equipos pequeños usando metodologías ágiles."
+          }
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "Title": "Contáctame",
+    "Headline": "Construyamos algo increíble juntos",
+    "Subheadline": "¿Tienes un proyecto o solo quieres saludar? Llena el formulario o mándame un correo.",
+    "Email": {
+      "Title": "Correo",
+      "Subtitle": "Te responderé personalmente lo antes posible."
+    },
+    "Phone": {
+      "Title": "Teléfono",
+      "Subtitle": "Disponible de lunes a viernes de 9 a.m. a 6 p.m. (hora de Ciudad de México)."
+    },
+    "WhatsApp": {
+      "Title": "WhatsApp",
+      "Subtitle": "Envíame un mensaje por WhatsApp",
+      "Button": "Iniciar chat"
+    }
+  },
+  "Footer": {
+    "Copyright": "Desarrollado por Carlos Rojas. Todos los derechos reservados."
+  }
+}

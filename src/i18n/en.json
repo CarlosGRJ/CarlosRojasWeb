@@ -1,0 +1,156 @@
+{
+  "LanguageToggle": {
+    "tooltip": "Switch to Spanish"
+  },
+  "Header": {
+    "Home": "Home",
+    "About": "About me",
+    "Services": "Services",
+    "Experience": "Experience",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact me"
+  },
+  "Home": {
+    "Title": "Hi, I’m Carlos",
+    "Description": "I create fast, responsive websites and custom web apps that help businesses grow online.",
+    "Badge": "✨ Let’s Build Something Great",
+    "Hire": "Hire me"
+  },
+  "About": {
+    "Title": "About Me",
+    "Description": "Hi, I’m Carlos, a full-stack web and mobile developer based in Mexico City. I specialize in building scalable, high-performance applications with clean code and a strong focus on user experience.\n\nWith experience at companies like The Home Depot, Indra, and Tich Solutions, I’ve worked on projects ranging from e-commerce platforms to enterprise systems. I’ve led frontend teams, collaborated in international environments, and built reusable, production-ready components using technologies like React, Next.js, Node.js, TypeScript, GraphQL, and SCSS.\n\nI care deeply about code quality, performance, and design. I enjoy solving complex problems and bringing ideas to life through thoughtful, efficient, and maintainable solutions.\n\nLet’s build something amazing together."
+  },
+  "Services": {
+    "Title": "Services",
+    "Services": [
+      {
+        "id": "1",
+        "title": "Web Application Development",
+        "desc": "I build modern, scalable, and responsive web apps using React, Next.js, and Node.js — optimized for performance and SEO."
+      },
+      {
+        "id": "2",
+        "title": "Mobile App Development",
+        "desc": "Cross-platform mobile apps using React Native that feel native and deliver fast, smooth user experiences on both iOS and Android."
+      },
+      {
+        "id": "3",
+        "title": "Frontend Architecture",
+        "desc": "Clean, maintainable component architecture with SCSS or Tailwind."
+      },
+      {
+        "id": "4",
+        "title": "Backend APIs & Database Integration",
+        "desc": "REST and GraphQL APIs with Node.js, Express, Firebase, or MongoDB — fully integrated with your frontend or third-party services."
+      },
+      {
+        "id": "5",
+        "title": "Portfolio & Landing Page Development",
+        "desc": "Fast, SEO-ready landing pages or portfolios with custom design, animations, and admin panels to manage content."
+      },
+      {
+        "id": "6",
+        "title": "CMS Integration or Admin Dashboards",
+        "desc": "Admin tools to update your site with no code. Firebase, headless CMS, or custom-made interfaces using React or Next.js."
+      }
+    ]
+  },
+  "Experience": {
+    "Title": "Experience",
+    "List": [
+      {
+        "id": "THD",
+        "date": "Sep 2024 - Feb 2025",
+        "role": "Frontend Developer",
+        "company": "The Home Depot (via The Adecco Group)",
+        "descriptions": [
+          {
+            "id": "THD1",
+            "desc": "Contributed to customer-facing e-commerce features for the U.S. market using React, Node.js, GraphQL, Apollo, and SCSS."
+          },
+          {
+            "id": "THD2",
+            "desc": "Developed responsive, accessible UI components following best practices."
+          },
+          {
+            "id": "THD3",
+            "desc": "Participated in agile workflows, daily stand-ups, and sprint planning using Jira and Scrum methodology."
+          },
+          {
+            "id": "THD4",
+            "desc": "Collaborated with international teams in English to ensure consistent delivery across markets."
+          }
+        ]
+      },
+      {
+        "id": "Idr",
+        "date": "Oct 2021 – Sep 2024",
+        "role": "Software Lead Engineer",
+        "company": "Indra",
+        "descriptions": [
+          {
+            "id": "Idr1",
+            "desc": "Led a frontend team of 7 developers across multiple projects for clients like Telcel, Banco Sabadell, and Banco Caminos."
+          },
+          {
+            "id": "Idr2",
+            "desc": "Developed and maintained SPAs using Angular, React, Redux, NgRx, and TypeScript."
+          },
+          {
+            "id": "Idr3",
+            "desc": "Oversaw code reviews and implemented testing using Jest and Jasmine."
+          },
+          {
+            "id": "Idr4",
+            "desc": "Worked closely with designers and backend engineers to ensure clean architecture and robust API integrations."
+          }
+        ]
+      },
+      {
+        "id": "TchS",
+        "date": "Jul 2020 – Jul 2021",
+        "role": "Full Stack Developer",
+        "company": "Tich Solutions",
+        "descriptions": [
+          {
+            "id": "Idr1",
+            "desc": "Developed custom SPAs with React and Angular, focusing on component reusability and performance."
+          },
+          {
+            "id": "Idr2",
+            "desc": "Implemented Single Sign-On (SSO) authentication using JSON Web Tokens (JWT)."
+          },
+          {
+            "id": "Idr3",
+            "desc": "Helped integrate front-end projects with backend services and cloud solutions."
+          },
+          {
+            "id": "Idr4",
+            "desc": "Contributed to project planning and delivery in small, agile teams."
+          }
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "Title": "Get in Touch",
+    "Headline": "Let's Build Something Great Together",
+    "Subheadline": "Got a project or just want to say hi? Fill out the form or drop me an email.",
+    "Email": {
+      "Title": "Email",
+      "Subtitle": "I’ll personally get back to you as soon as possible."
+    },
+    "Phone": {
+      "Title": "Phone",
+      "Subtitle": "Available Mon–Fri from 9am to 6pm (Mexico City time)."
+    },
+    "WhatsApp": {
+      "Title": "WhatsApp",
+      "Subtitle": "Text me on WhatsApp",
+      "Button": "Start Chat"
+    }
+  },
+  "Footer": {
+    "Copyright": "Developed by Carlos Rojas. All rights reserved."
+  }
+}
