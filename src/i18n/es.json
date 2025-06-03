@@ -148,6 +148,40 @@
       "Title": "WhatsApp",
       "Subtitle": "Envíame un mensaje por WhatsApp",
       "Button": "Iniciar chat"
+    },
+    "Form": {
+      "FirstName": "Nombre",
+      "LastName": "Apellido",
+      "Email": "Correo electrónico",
+      "Message": "Mensaje",
+      "Send": "Enviar",
+      "Sending": "Enviando...",
+      "Success": "¡Mensaje enviado correctamente!",
+      "Error": "Ocurrió un error. Por favor, intenta de nuevo.",
+      "Validation": {
+        "MissingFields": {
+          "Title": "Faltan campos",
+          "Description": "Por favor, completa todos los campos."
+        },
+        "InvalidEmail": {
+          "Title": "Correo no válido",
+          "Description": "Por favor, ingresa un correo electrónico válido."
+        },
+        "CaptchaRequired": {
+          "Title": "Captcha requerido",
+          "Description": "Por favor, completa el captcha antes de enviar."
+        }
+      },
+      "Toast": {
+        "Success": {
+          "Title": "¡Mensaje enviado!",
+          "Description": "Gracias por ponerte en contacto."
+        },
+        "Failure": {
+          "Title": "Error al enviar",
+          "Description": "Inténtalo más tarde o escribe por WhatsApp."
+        }
+      }
     }
   },
   "Footer": {

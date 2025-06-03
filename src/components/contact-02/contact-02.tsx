@@ -46,24 +46,24 @@ const Contact02Page = () => {
 
     if (!firstName || !lastName || !email || !message) {
       setLoading(false);
-      toast.warning('Faltan campos', {
-        description: 'Por favor, completa todos los campos.',
+      toast.warning(t.Contact.Form.Validation.MissingFields.Title, {
+        description: t.Contact.Form.Validation.MissingFields.Description,
       });
       return;
     }
 
     if (!validateEmail(email)) {
       setLoading(false);
-      toast.warning('Correo no válido', {
-        description: 'Por favor, ingresa un correo electrónico válido.',
+      toast.warning(t.Contact.Form.Validation.InvalidEmail.Title, {
+        description: t.Contact.Form.Validation.InvalidEmail.Description,
       });
       return;
     }
 
     if (!turnstileToken) {
       setLoading(false);
-      toast.warning('Captcha requerido', {
-        description: 'Por favor, completa el captcha antes de enviar.',
+      toast.warning(t.Contact.Form.Validation.CaptchaRequired.Title, {
+        description: t.Contact.Form.Validation.CaptchaRequired.Description,
       });
       return;
     }
@@ -77,14 +77,14 @@ const Contact02Page = () => {
       )
       .then(() => {
         form.reset();
-        toast.success('¡Mensaje enviado!', {
-          description: 'Gracias por ponerte en contacto.',
+        toast.success(t.Contact.Form.Toast.Success.Title, {
+          description: t.Contact.Form.Toast.Success.Description,
           className: 'bg-green-500 text-white',
         });
       })
       .catch(() => {
-        toast.error('Error al enviar', {
-          description: 'Inténtalo más tarde o escribe por WhatsApp.',
+        toast.error(t.Contact.Form.Toast.Failure.Title, {
+          description: t.Contact.Form.Toast.Failure.Description,
         });
       })
       .finally(() => {
@@ -169,50 +169,52 @@ const Contact02Page = () => {
               <form ref={formRef} onSubmit={handleSubmit}>
                 <div className='grid md:grid-cols-2 gap-x-8 gap-y-5'>
                   <div className='col-span-2 sm:col-span-1'>
-                    <Label htmlFor='firstName'>Nombre</Label>
+                    <Label htmlFor='firstName'>
+                      {t.Contact.Form.FirstName}
+                    </Label>
                     <Input
-                      placeholder='Nombre'
+                      placeholder={t.Contact.Form.FirstName}
                       id='firstName'
                       name='firstName'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label='Nombre'
+                      aria-label={t.Contact.Form.FirstName}
                     />
                   </div>
 
                   <div className='col-span-2 sm:col-span-1'>
-                    <Label htmlFor='lastName'>Apellido</Label>
+                    <Label htmlFor='lastName'>{t.Contact.Form.LastName}</Label>
                     <Input
-                      placeholder='Apellido'
+                      placeholder={t.Contact.Form.LastName}
                       id='lastName'
                       name='lastName'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label='Apellido'
+                      aria-label={t.Contact.Form.LastName}
                     />
                   </div>
                   <div className='col-span-2'>
-                    <Label htmlFor='email'>Correo</Label>
+                    <Label htmlFor='email'>{t.Contact.Form.Email}</Label>
                     <Input
                       type='email'
-                      placeholder='Correo'
+                      placeholder={t.Contact.Form.Email}
                       id='email'
                       name='email'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label='Correo'
+                      aria-label={t.Contact.Form.Email}
                     />
                   </div>
                   <div className='col-span-2'>
-                    <Label htmlFor='message'>Mensaje</Label>
+                    <Label htmlFor='message'>{t.Contact.Form.Message}</Label>
                     <Textarea
                       id='message'
                       name='message'
-                      placeholder='Mensaje'
+                      placeholder={t.Contact.Form.Message}
                       className='mt-1.5 bg-white shadow-none'
                       rows={6}
                       required
-                      aria-label='Mensaje'
+                      aria-label={t.Contact.Form.Message}
                     />
                   </div>
 
@@ -233,7 +235,7 @@ const Contact02Page = () => {
                 {error && <p className='text-red-600 mt-4'>{error}</p>}
                 {sent && (
                   <p className='text-green-600 mt-4'>
-                    ¡Mensaje enviado correctamente!
+                    {t.Contact.Form.Success}
                   </p>
                 )}
 
@@ -241,8 +243,8 @@ const Contact02Page = () => {
                   className='mt-6 w-full'
                   size='lg'
                   disabled={loading}
-                  aria-label='Enviar'>
-                  {loading ? 'Enviando...' : 'Enviar'}
+                  aria-label={t.Contact.Form.Send}>
+                  {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
                 </Button>
               </form>
             </CardContent>

@@ -148,6 +148,40 @@
       "Title": "WhatsApp",
       "Subtitle": "Text me on WhatsApp",
       "Button": "Start Chat"
+    },
+    "Form": {
+      "FirstName": "First name",
+      "LastName": "Last name",
+      "Email": "Email",
+      "Message": "Message",
+      "Send": "Send",
+      "Sending": "Sending...",
+      "Success": "Message sent successfully!",
+      "Error": "An error occurred. Please try again.",
+      "Validation": {
+        "MissingFields": {
+          "Title": "Missing fields",
+          "Description": "Please complete all fields."
+        },
+        "InvalidEmail": {
+          "Title": "Invalid email",
+          "Description": "Please enter a valid email address."
+        },
+        "CaptchaRequired": {
+          "Title": "Captcha required",
+          "Description": "Please complete the captcha before submitting."
+        }
+      },
+      "Toast": {
+        "Success": {
+          "Title": "Message sent!",
+          "Description": "Thanks for getting in touch."
+        },
+        "Failure": {
+          "Title": "Sending failed",
+          "Description": "Try again later or message me on WhatsApp."
+        }
+      }
     }
   },
   "Footer": {
