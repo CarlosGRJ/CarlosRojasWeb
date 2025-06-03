@@ -11,12 +11,12 @@ export default function ServicesSection() {
   return (
     <section
       id='services'
-      className='flex flex-col items-center px-8 md:px-16 lg:px-24 text-base'>
-      <h2 className='text-4xl font-bold border-b-4 border-primary mb-6 md:mb-20 lg:mb-28'>
+      className='flex flex-col items-center px-8 md:px-16 lg:px-24 text-base pt-16'>
+      <h2 className='text-4xl font-bold border-b-4 border-primary mb-6 md:mb-20'>
         {t.Services.Title}
       </h2>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-16 w-full'>
         {services.map((service, i) => (
           <Card
             key={service.id}

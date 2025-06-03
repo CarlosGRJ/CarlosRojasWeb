@@ -91,7 +91,7 @@ export default function PortfolioDialog({
               <strong>Role:</strong> {project.role}
             </p>
 
-            <div className='prose prose-sm max-w-none text-foreground'>
+            <div className='prose prose-sm max-w-none text-foreground flex flex-col gap-4'>
               {project.description}
             </div>
 

@@ -139,21 +139,36 @@ export const projects: ProjectItem[] = [
     id: 'bc-simulator',
     title: 'Banco Caminos - Simulator',
     summary:
-      'I contributed to Banco caminos’s U.S. e-commerce platform, building key rental and delivery flows within a large-scale React architecture.',
+      'I built an interactive mortgage simulator for Banco Caminos, guiding users through a step-by-step process to calculate and compare mortgage options based on their financial profile.',
     description: (
       <>
         <p>
-          I worked on Baco caminos U.S. e-commerce platform, contributing to its
-          micro-frontend React architecture. My responsibilities included:
+          The Banco Caminos Mortgage Simulator was developed to help potential
+          clients explore mortgage options tailored to their personal and
+          financial data.
         </p>
         <ul>
-          <li>🔧 Tool, vehicle,s and equipment rentals (step-by-step flow)</li>
-          <li>🚚 Scheduled equipment deliveries</li>
-          <li>🔁 Migration osf REST to GraphQL with Apollo Client</li>
+          <li>
+            🧮 4-step guided form capturing key user information (salary,
+            expenses, property details, etc.)
+          </li>
+          <li>
+            📊 Real-time calculations showing monthly payments, interest rates,
+            and bank offers
+          </li>
+          <li>
+            💡 Integration of conditional flows and validations to guide
+            decision-making
+          </li>
+          <li>
+            📩 A lead capture form was included to convert interest into contact
+            opportunities
+          </li>
         </ul>
         <p>
-          This required closse collaboration with international teams and strict
-          adherence to accesssibility and performance standards.
+          Built using React, Tailwind CSS, and TypeScript, I implemented
+          multiple APIs and ensured accessibility, responsive design, and an
+          intuitive UI/UX aligned with the brand.
         </p>
       </>
     ),
@@ -185,8 +200,9 @@ export const projects: ProjectItem[] = [
       },
     ],
     role: 'Frontend Developer',
-    techStack: 'React, GraphQL, Apollo, SCSS',
-    url: 'https://www.homedepot.com/',
+    techStack: 'React, Tailwind, TypeScript',
+    url: '',
+    isInternal: true,
   },
   {
     id: 'bc-explorer',

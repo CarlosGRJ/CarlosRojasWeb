@@ -15,12 +15,12 @@ export default function PortfolioSection() {
   return (
     <section
       id='portfolio'
-      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16'>
-      <h2 className='text-4xl font-bold mb-6 md:mb-20 lg:mb-28 border-b-4 border-primary pb-2'>
+      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
+      <h2 className='text-4xl font-bold mb-6 border-b-4 border-primary pb-2'>
         Portfolio
       </h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-12'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mt-12'>
         {projects.map((project) => (
           <article
             key={project.id}

@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable} antialiased px-20`}>
+      <body className={`${poppins.variable} antialiased px-8 sm:px-20`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <TranslationProvider>
             <Navbar01Page />
-            <main className='px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
+            <main className='px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
               {children}
             </main>
             <Footer05Page />

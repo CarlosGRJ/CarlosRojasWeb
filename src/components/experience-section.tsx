@@ -10,8 +10,8 @@ export default function ExperienceSection() {
   return (
     <section
       id='experience'
-      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16'>
-      <h2 className='text-4xl font-bold mb-6 md:mb-20 lg:mb-28 border-b-4 border-primary pb-2'>
+      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
+      <h2 className='text-4xl font-bold mb-6 md:mb-20 border-b-4 border-primary pb-2'>
         {t.Experience.Title}
       </h2>
 

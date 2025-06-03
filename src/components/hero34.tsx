@@ -8,7 +8,7 @@ interface Hero34Props {
 
 const Hero34 = ({ description }: Hero34Props) => {
   return (
-    <section id='about' className='text-center'>
+    <section id='about' className='text-center pt-16'>
       <h2 className='sec-title font-bold mb-6 md:mb-20 lg:mb-28 text-left sm:text-center'>
         About Me
       </h2>
