@@ -21,8 +21,67 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Carlos Rojas | Frontend Developer',
   description:
-    'Portfolio of Carlos Rojas, a passionate web and mobile developer with expertise in React, Next.js, Firebase, and more.',
-  authors: [{ name: 'Carlos Gerardo Rojas Jaime' }],
+    'Hi, I’m Carlos Rojas — a frontend developer from Mexico City specialized in React, Next.js, TypeScript, and UI/UX. Explore my portfolio, projects, and contact details.',
+  authors: [
+    { name: 'Carlos Gerardo Rojas Jaime', url: 'https://www.carlosrojasj.dev' },
+  ],
+  creator: 'Carlos Rojas',
+  generator: 'Next.js',
+  keywords: [
+    'Carlos Rojas',
+    'Carlos Gerardo Rojas Jaime',
+    'Frontend Developer',
+    'FullStack Developer',
+    'React Developer',
+    'Next.js Portfolio',
+    'Web Developer',
+    'JavaScript',
+    'TypeScript',
+    'Mexico Developer',
+    'Tailwind CSS',
+    'Freelance Developer',
+    'UI Engineer',
+  ],
+  metadataBase: new URL('https://www.carlosrojasj.dev'),
+  openGraph: {
+    title: 'Carlos Rojas | Frontend Developer',
+    description:
+      'Frontend developer based in Mexico City. Passionate about building clean, accessible, and scalable web applications.',
+    url: 'https://www.carlosrojasj.dev',
+    siteName: 'Carlos Rojas Portfolio',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.carlosrojasj.dev/CoverPortfolio.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Carlos Rojas Portfolio Cover',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Carlos Rojas | Frontend Developer',
+    description:
+      'Explore my projects built with React, Next.js, and modern frontend tools.',
+    images: ['https://www.carlosrojasj.dev/CoverPortfolio.webp'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.carlosrojasj.dev',
+  },
+  other: {
+    'google-site-verification': 'gS_kudSgpEVfZ4DGN4MdKUYcmLBbgvRUibhuvjvqfbg',
+  },
 };
 
 export default function RootLayout({

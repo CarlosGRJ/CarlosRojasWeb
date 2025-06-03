@@ -12,7 +12,7 @@ export default function ServicesSection() {
     <section
       id='services'
       className='flex flex-col items-center px-8 md:px-16 lg:px-24 text-base pt-16'>
-      <h2 className='text-4xl font-bold border-b-4 border-primary mb-6 md:mb-20'>
+      <h2 className='text-4xl font-bold border-b-4 border-primary mb-16 md:mb-20'>
         {t.Services.Title}
       </h2>
 
@@ -22,7 +22,7 @@ export default function ServicesSection() {
             key={service.id}
             className='bg-background text-foreground border border-gray-300 dark:border-gray-700 rounded-xl p-6 
                  shadow-none hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
-                 flex flex-col gap-4 text-left'>
+                 flex flex-col gap-4 text-center sm:text-left items-center sm:items-baseline'>
             <div className='text-3xl mb-4 w-30 h-30'>{service.icon}</div>
             <h3 className='text-xl font-semibold mb-2'>
               {t.Services.Services[i].title}

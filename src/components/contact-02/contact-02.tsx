@@ -96,11 +96,11 @@ const Contact02Page = () => {
     <section
       id='contact'
       className='min-h-screen flex flex-col items-center w-full pt-16'>
-      <h2 className='text-4xl font-bold  mb-6 md:mb-20 border-b-4 border-primary pb-2'>
+      <h2 className='text-4xl font-bold  mb-16 md:mb-20 border-b-4 border-primary pb-2'>
         {t.Contact.Title}
       </h2>
 
-      <div>
+      <div className='text-center sm:text-start'>
         <b className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
           {t.Contact.Headline}
         </b>
@@ -108,8 +108,8 @@ const Contact02Page = () => {
         <p className='mt-3 text-base sm:text-lg'>{t.Contact.Subheadline}</p>
 
         <div className='mt-24 grid lg:grid-cols-2 gap-16 md:gap-10'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12'>
-            <div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 text-center sm:text-start'>
+            <div className='flex flex-col items-center sm:items-start'>
               <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
                 <MailIcon />
               </div>
@@ -126,7 +126,7 @@ const Contact02Page = () => {
               </Link>
             </div>
 
-            <div>
+            <div className='flex flex-col items-center sm:items-start'>
               <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
                 <PhoneIcon />
               </div>
@@ -143,7 +143,7 @@ const Contact02Page = () => {
               </Link>
             </div>
 
-            <div>
+            <div className='flex flex-col items-center sm:items-start'>
               <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
                 <MessageSquareText />
               </div>

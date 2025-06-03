@@ -24,7 +24,7 @@ export default function PortfolioSection() {
         {projects.map((project) => (
           <article
             key={project.id}
-            className='bg-background border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col justify-between overflow-hidden'>
+            className='bg-background border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col gap-4 justify-between overflow-hidden'>
             <figure className='w-full h-[200px] overflow-hidden'>
               <Image
                 src={project.coverImg}
@@ -38,7 +38,7 @@ export default function PortfolioSection() {
               />
             </figure>
 
-            <div className='flex flex-col gap-4 p-6'>
+            <div className='flex flex-col gap-8 p-6'>
               <h3 className='text-2xl font-semibold text-foreground'>
                 {project.title}
               </h3>

@@ -11,7 +11,7 @@ export default function ExperienceSection() {
     <section
       id='experience'
       className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
-      <h2 className='text-4xl font-bold mb-6 md:mb-20 border-b-4 border-primary pb-2'>
+      <h2 className='text-4xl font-bold mb-16 md:mb-20 border-b-4 border-primary pb-2'>
         {t.Experience.Title}
       </h2>
 

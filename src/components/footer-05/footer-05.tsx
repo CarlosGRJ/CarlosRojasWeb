@@ -1,15 +1,12 @@
 'use client';
 
-import { Separator } from '@/components/ui/separator';
-import {
-  DribbbleIcon,
-  GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
-} from 'lucide-react';
 import Link from 'next/link';
+
+import { Separator } from '@/components/ui/separator';
 import { Logo } from '../navbar-01/logo';
 import { useTranslation } from '@/context/TranslationProvider';
+
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer05Page = () => {
   const { t } = useTranslation();
@@ -68,17 +65,18 @@ const Footer05Page = () => {
           </span>
 
           <div className='flex items-center gap-5 text-muted-foreground'>
-            <Link href='#' target='_blank'>
-              <TwitterIcon className='h-5 w-5' />
+            <Link href='https://github.com/CarlosGRJ' target='_blank'>
+              <FaGithub className='h-5 w-5' />
             </Link>
-            <Link href='#' target='_blank'>
-              <DribbbleIcon className='h-5 w-5' />
+
+            <Link
+              href='https://www.instagram.com/carloscodebrew'
+              target='_blank'>
+              <FaInstagram className='h-5 w-5' />
             </Link>
-            <Link href='#' target='_blank'>
-              <TwitchIcon className='h-5 w-5' />
-            </Link>
-            <Link href='#' target='_blank'>
-              <GithubIcon className='h-5 w-5' />
+
+            <Link href='https://www.linkedin.com/in/carlosgrj' target='_blank'>
+              <FaLinkedinIn className='h-5 w-5' />
             </Link>
           </div>
         </div>

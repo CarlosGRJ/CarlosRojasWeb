@@ -1,9 +1,10 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 
 interface Hero1Props {
   badge?: string;
@@ -71,7 +72,7 @@ const Hero1 = ({
                 <Button asChild variant='outline' className='w-full sm:w-auto'>
                   <Link href={buttons.secondary.url} target='_blank'>
                     {buttons.secondary.text}
-                    <ArrowRight className='size-4' />
+                    <FaGithub className='size-4' />
                   </Link>
                 </Button>
               )}
