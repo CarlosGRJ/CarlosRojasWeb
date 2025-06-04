@@ -1,29 +1,29 @@
 import { ProjectItem } from '@/types/portfolio';
 
-export const projects: ProjectItem[] = [
+export const projectsEsp: ProjectItem[] = [
   {
     id: 'carteras',
     title: 'Carteras Landing Page',
     summary:
-      'I developed a minimalist landing page to showcase a collection of leather wallets, optimized for performance, responsiveness, and conversion.',
+      'Desarrollé una landing page minimalista para exhibir una colección de carteras de piel, optimizada para rendimiento, responsividad y conversión.',
     description: (
       <>
         <p>
-          I created a product landing page for a local wallet brand, designed to
-          highlight six unique models (for both men and women) with a clean,
-          modern aesthetic. Built with Next.js, Tailwind CSS, and ShadCN UI, the
-          project focused on:
+          Creé una landing page de producto para una marca local de carteras,
+          diseñada para resaltar 8 modelos únicos (para hombre y mujer) con una
+          estética moderna y limpia. Construido con Next.js, Tailwind CSS y
+          ShadCN UI, el proyecto se enfocó en:
         </p>
         <ul>
-          <li>🛍️ High-performance product showcase</li>
-          <li>📱 Responsive layout for mobile-first experience</li>
-          <li>📸 Custom lightbox gallery for product images</li>
-          <li>💬 WhatsApp contact integration for inquiries</li>
+          <li>🛍️ Exhibición de productos con alto rendimiento</li>
+          <li>📱 Diseño responsivo optimizado para móviles</li>
+          <li>📸 Galería personalizada con lightbox para imágenes</li>
+          <li>💬 Integración con WhatsApp para facilitar consultas</li>
         </ul>
         <p>
-          The page is lightweight, fast, and tailored for potential customers to
-          easily browse and contact the seller without a full e-commerce
-          backend.
+          La página es ligera, rápida y pensada para que los clientes
+          potenciales puedan navegar fácilmente y contactar al vendedor, sin
+          necesidad de un backend de e-commerce completo.
         </p>
       </>
     ),
@@ -66,7 +66,7 @@ export const projects: ProjectItem[] = [
         alt: 'Carteras Footer',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Desarrollador Frontend',
     techStack: 'Next.js, Shadcn, Tailwind, TypeScript, Vercel',
     url: 'https://www.erikavillap.com/',
   },
@@ -74,21 +74,28 @@ export const projects: ProjectItem[] = [
     id: 'THD',
     title: 'The Home Depot – E-commerce Platform',
     summary:
-      'I contributed to The Home Depot’s U.S. e-commerce platform, building key rental and delivery flows within a large-scale React architecture.',
+      'Contribuí al desarrollo de la plataforma de e-commerce de The Home Depot en Estados Unidos, creando flujos clave de renta y entrega dentro de una arquitectura React a gran escala.',
     description: (
       <>
         <p>
-          I worked on The Home Depot’s U.S. e-commerce platform, contributing to
-          its micro-frontend React architecture. My responsibilities included:
+          Trabajé en la plataforma de e-commerce de The Home Depot en Estados
+          Unidos, colaborando en su arquitectura React basada en
+          micro-frontends. Mis responsabilidades incluyeron:
         </p>
+
         <ul>
-          <li>🔧 Tool, vehicle, and equipment rentals (step-by-step flow)</li>
-          <li>🚚 Scheduled equipment deliveries</li>
-          <li>🔁 Migration of REST to GraphQL with Apollo Client</li>
+          <li>
+            🔧 Flujos paso a paso para la renta de herramientas, vehículos y
+            equipos
+          </li>
+          <li>🚚 Implementación de entregas programadas de equipos</li>
+          <li>🔁 Migración de REST a GraphQL utilizando Apollo Client</li>
         </ul>
+
         <p>
-          This required close collaboration with international teams and strict
-          adherence to accessibility and performance standards.
+          Este trabajo requirió una estrecha colaboración con equipos
+          internacionales y el cumplimiento estricto de estándares de
+          accesibilidad y rendimiento.
         </p>
       </>
     ),
@@ -131,7 +138,7 @@ export const projects: ProjectItem[] = [
         alt: 'Checkout',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Desarrollador Frontend',
     techStack:
       'React, GraphQL, Apollo, SCSS, Tailwind, Jest, React Testing Library',
     url: 'https://www.homedepot.com/',
@@ -140,36 +147,38 @@ export const projects: ProjectItem[] = [
     id: 'bc-simulator',
     title: 'Banco Caminos - Simulator',
     summary:
-      'I built an interactive mortgage simulator for Banco Caminos, guiding users through a step-by-step process to calculate and compare mortgage options based on their financial profile.',
+      'Desarrollé un simulador hipotecario interactivo para Banco Caminos, guiando a los usuarios en un proceso paso a paso para calcular y comparar opciones de hipoteca según su perfil financiero.',
     description: (
       <>
         <p>
-          The Banco Caminos Mortgage Simulator was developed to help potential
-          clients explore mortgage options tailored to their personal and
-          financial data.
+          El Simulador Hipotecario de Banco Caminos fue creado para ayudar a
+          potenciales clientes a explorar opciones de hipoteca personalizadas
+          según sus datos personales y financieros.
         </p>
+
         <ul>
           <li>
-            🧮 4-step guided form capturing key user information (salary,
-            expenses, property details, etc.)
+            🧮 Formulario guiado en 4 pasos que captura información clave del
+            usuario (salario, gastos, detalles de la propiedad, etc.)
           </li>
           <li>
-            📊 Real-time calculations showing monthly payments, interest rates,
-            and bank offers
+            📊 Cálculos en tiempo real mostrando mensualidades, tasas de interés
+            y ofertas bancarias
           </li>
           <li>
-            💡 Integration of conditional flows and validations to guide
-            decision-making
+            💡 Integración de flujos condicionales y validaciones para guiar la
+            toma de decisiones
           </li>
           <li>
-            📩 A lead capture form was included to convert interest into contact
-            opportunities
+            📩 Formulario de captura de leads para convertir el interés en
+            oportunidades de contacto
           </li>
         </ul>
+
         <p>
-          Built using React, Tailwind CSS, and TypeScript, I implemented
-          multiple APIs and ensured accessibility, responsive design, and an
-          intuitive UI/UX aligned with the brand.
+          Desarrollado con React, Tailwind CSS y TypeScript, implementé
+          múltiples APIs asegurando accesibilidad, diseño responsivo y una
+          experiencia de usuario intuitiva alineada con la marca.
         </p>
       </>
     ),
@@ -200,7 +209,7 @@ export const projects: ProjectItem[] = [
         alt: 'BC step4_3',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Desarrollador Frontend',
     techStack:
       'React, TypeScript, SCSS, Tailwind, i18n, Jest, React Testing Library',
     url: '',
@@ -210,28 +219,35 @@ export const projects: ProjectItem[] = [
     id: 'bc-explorer',
     title: 'Banco Caminos - Explorer',
     summary:
-      'I contributed to Banco Caminos’ property explorer tool, implementing dynamic components like tables, charts, and interactive modals to enhance the user experience.',
+      'Contribuí a la herramienta de exploración de propiedades de Banco Caminos, implementando componentes dinámicos como tablas, gráficas y modales interactivos para mejorar la experiencia del usuario.',
     description: (
       <>
         <p>
-          I worked on Banco Caminos’ real estate explorer app, which allows
-          users to search and analyze available properties throughout Spain. My
-          contributions included:
+          Trabajé en la aplicación de exploración inmobiliaria de Banco Caminos,
+          la cual permite a los usuarios buscar y analizar propiedades
+          disponibles en toda España. Mis contribuciones incluyeron:
         </p>
         <ul>
-          <li>📍 Location-based property search with filterable tables</li>
           <li>
-            🗺️ Interactive map integration for visualizing property positions
+            📍 Búsqueda de propiedades por ubicación con tablas filtrables
           </li>
           <li>
-            📊 Price evolution charts showing historical trends per property
+            🗺️ Integración con mapas interactivos para visualizar la ubicación
+            de las propiedades
           </li>
-          <li>🪟 Reusable modals and property info banners</li>
+          <li>
+            📊 Gráficas de evolución de precios que muestran tendencias
+            históricas por propiedad
+          </li>
+          <li>
+            🪟 Modales reutilizables y banners con información detallada de cada
+            propiedad
+          </li>
         </ul>
         <p>
-          The project involved collaborating with backend teams to connect data
-          to the UI, focusing on usability and performance in React and
-          TypeScript.
+          El proyecto implicó colaboración con equipos backend para conectar los
+          datos al frontend, con enfoque en la usabilidad y el rendimiento
+          utilizando React y TypeScript.
         </p>
       </>
     ),
@@ -254,7 +270,7 @@ export const projects: ProjectItem[] = [
         alt: 'BC step3',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Desarrollador Frontend',
     techStack:
       'React, TypeScript, SCSS, Tailwind, i18n, Jest, React Testing Library',
     isInternal: true,
@@ -265,33 +281,38 @@ export const projects: ProjectItem[] = [
     title: 'Banco Sabadell – Mortgage Simulator',
     isInternal: true,
     summary:
-      'I developed key components of a mortgage simulator for Banco Sabadell, based on a reusable product designed to be adapted for multiple banks.',
+      'Desarrollé componentes clave de un simulador hipotecario para Banco Sabadell, basado en un producto reutilizable diseñado para adaptarse a múltiples bancos.',
     description: (
       <>
         <p>
-          I worked on a mortgage simulator project for Banco Sabadell, built on
-          the same foundations as the Banco Caminos property explorer. This
-          simulator helped users calculate and visualize mortgage options based
-          on property data and financial inputs. My contributions included:
+          Trabajé en el proyecto de un simulador hipotecario para Banco
+          Sabadell, construido sobre las mismas bases que la herramienta de
+          exploración inmobiliaria de Banco Caminos. Este simulador permitía a
+          los usuarios calcular y visualizar opciones hipotecarias basadas en
+          datos de propiedad e información financiera. Mis contribuciones
+          incluyeron:
         </p>
 
         <ul>
           <li>
-            📊 Dynamic chart and table components to display simulation results
+            📊 Componentes dinámicos de gráficas y tablas para mostrar los
+            resultados de la simulación
           </li>
           <li>
-            🧩 Modular component architecture for product reuse across banks
+            🧩 Arquitectura modular de componentes para reutilizar el producto
+            en distintos bancos
           </li>
           <li>
-            🔁 Adaptation of shared logic from a previous real estate tool
+            🔁 Adaptación de lógica compartida desde una herramienta
+            inmobiliaria previa
           </li>
-          <li>⚙️ Built entirely using Angular and TypeScript</li>
+          <li>⚙️ Desarrollado completamente en Angular y TypeScript</li>
         </ul>
 
         <p>
-          This simulator became a reusable base product that was later adapted
-          for other banks, with a strong focus on scalability, user experience,
-          and data-driven visualization.
+          Este simulador se convirtió en un producto base reutilizable que
+          posteriormente fue adaptado para otros bancos, con un fuerte enfoque
+          en escalabilidad, experiencia de usuario y visualización de datos.
         </p>
       </>
     ),
@@ -318,7 +339,7 @@ export const projects: ProjectItem[] = [
         alt: 'Sabadell step5',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Desarrollador Frontend',
     techStack:
       'Angular, Tailwind, TypeScript, i18n, Jasmine, Karma, Custom Components',
     url: '',
@@ -328,42 +349,44 @@ export const projects: ProjectItem[] = [
     title: 'Telcel - B2B Dashboard',
     isInternal: true,
     summary:
-      'Led a team of 7 developers to build Telcel’s B2B admin dashboard from scratch, implementing Scrum methodology and designing the project architecture.',
+      'Lideré un equipo de 7 desarrolladores para construir desde cero el panel administrativo B2B de Telcel, implementando metodología Scrum y diseñando la arquitectura del proyecto.',
     description: (
       <>
         <p>
-          At Telcel B2B, I collaborated as a front-end team lead to develop a
-          corporate-facing admin dashboard. The application was part of a larger
-          ecosystem used to manage Telcel’s internal business logic for
-          corporate clients. My key responsibilities included:
+          En Telcel B2B, colaboré como líder del equipo de frontend para
+          desarrollar un panel administrativo corporativo. La aplicación formaba
+          parte de un ecosistema más amplio utilizado para gestionar la lógica
+          de negocio interna de Telcel enfocada en clientes corporativos. Mis
+          responsabilidades clave incluyeron:
         </p>
 
         <ul>
           <li>
-            🚀 Project setup from scratch: architecture, folder structure, and
-            CI coordination
+            🚀 Configuración del proyecto desde cero: arquitectura, estructura
+            de carpetas y coordinación de CI
           </li>
           <li>
-            👥 Leadership of a 7-person front-end team with no dedicated Scrum
-            Master
+            👥 Liderazgo de un equipo de 7 desarrolladores frontend sin Scrum
+            Master asignado
           </li>
           <li>
-            📋 Defined Scrum processes: created epics, backlog items, and
-            coordinated sprint planning
+            📋 Definición del proceso Scrum: creación de épicas, backlog items y
+            planificación de sprints
           </li>
           <li>
-            📑 Business logic documentation and API management using Postman
+            📑 Documentación de lógica de negocio y gestión de APIs con Postman
           </li>
           <li>
-            🧩 Developed complex forms and flows that integrated with other
-            Telcel internal systems
+            🧩 Desarrollo de formularios complejos y flujos integrados con otros
+            sistemas internos de Telcel
           </li>
         </ul>
 
         <p>
-          This project required strong coordination skills, deep technical
-          knowledge, and cross-team communication to ensure consistent
-          integration across multiple apps within Telcel’s ecosystem.
+          Este proyecto requirió sólidas habilidades de coordinación, profundo
+          conocimiento técnico y comunicación entre equipos para asegurar una
+          integración consistente entre múltiples aplicaciones dentro del
+          ecosistema de Telcel.
         </p>
       </>
     ),
@@ -478,7 +501,7 @@ export const projects: ProjectItem[] = [
         alt: 'Consulta-Tramites B2B',
       },
     ],
-    role: 'Frontend Developer',
+    role: 'Líder de Equipo Frontend',
     techStack:
       'Angular, RxJS, TypeScript, Jasmine, Karma, PrimeNG, Tailwind, SCSS',
     url: '',

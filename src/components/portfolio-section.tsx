@@ -6,11 +6,18 @@ import { Button } from '@/components/ui/button';
 import { projects } from '@/constants/projectsData';
 import { ProjectItem } from '@/types/portfolio';
 import PortfolioDialog from './ui/porfolio-dialog';
+import { useTranslation } from '@/context/TranslationProvider';
+import { projectsEsp } from '@/constants/projectsDataEs';
+import { LanguageEnum } from '@/types/language';
 
 export default function PortfolioSection() {
+  const { locale } = useTranslation();
+
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
   );
+
+  const projectList = locale === LanguageEnum.ES ? projectsEsp : projects;
 
   return (
     <section
@@ -21,7 +28,7 @@ export default function PortfolioSection() {
       </h2>
 
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mt-12'>
-        {projects.map((project) => (
+        {projectList.map((project) => (
           <article
             key={project.id}
             className='bg-background border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col gap-4 justify-between overflow-hidden'>
