@@ -25,7 +25,7 @@ const Navbar01Page = () => {
   return (
     <nav
       className={`h-16 z-50 bg-background border-b transition-all duration-300 ${
-        isSticky ? 'sticky top-0 shadow-sm backdrop-blur' : ''
+        isSticky ? 'sticky top-0 backdrop-blur' : ''
       }`}>
       <div className='h-full flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
         <Logo className='w-20 h-14' />

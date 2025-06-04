@@ -25,16 +25,15 @@ export default function PortfolioSection() {
           <article
             key={project.id}
             className='bg-background border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col gap-4 justify-between overflow-hidden'>
-            <figure className='w-full h-[200px] overflow-hidden'>
+            <figure className='relative aspect-[16/9] w-full overflow-hidden rounded-t-xl'>
               <Image
                 src={project.coverImg}
                 alt={project.title}
-                width={600}
-                height={400}
+                fill
+                className='object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 quality={85}
                 priority
-                className='w-full h-full object-fill transition-transform duration-300 ease-in-out hover:scale-105'
               />
             </figure>
 

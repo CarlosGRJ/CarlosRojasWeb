@@ -15,18 +15,19 @@ const TranslationContext = createContext<TranslationContextType | undefined>(
 
 export const TranslationProvider = ({
   children,
-  locale: initialLocale,
 }: {
   children: React.ReactNode;
-  locale: Locale;
 }) => {
-  const [locale, setLocale] = useState<Locale>(initialLocale);
-  const [t, setT] = useState<Dictionary>(getDictionary(initialLocale));
+  const [locale, setLocale] = useState<Locale>('en');
+  const [t, setT] = useState<Dictionary>(getDictionary('en')); // ✅ now sync
 
   useEffect(() => {
-    setLocale(initialLocale);
-    setT(getDictionary(initialLocale));
-  }, [initialLocale]);
+    const saved = localStorage.getItem('locale') as Locale | null;
+    if (saved) {
+      setLocale(saved);
+      setT(getDictionary(saved));
+    }
+  }, []);
 
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'es' : 'en';

@@ -27,7 +27,13 @@ export default function LightDarkToggle({ className }: { className?: string }) {
                 : ThemeEnum.LIGHT,
             );
           }}>
-          <Button variant='outline'>
+          <Button
+            variant='outline'
+            aria-label={
+              resolvedTheme === ThemeEnum.LIGHT
+                ? 'Enable dark mode'
+                : 'Enable light mode'
+            }>
             <SunIcon className='block dark:hidden' />
             <MoonIcon className='hidden dark:block' />
           </Button>

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import '../globals.css';
 import Navbar01Page from '@/components/navbar-01/navbar-01';
 import { TranslationProvider } from '@/context/TranslationProvider';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -9,6 +8,8 @@ import { Toaster } from '@/components/ui/sonner';
 
 import 'yet-another-react-lightbox/styles.css';
 import Footer05Page from '@/components/footer-05/footer-05';
+
+import './globals.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -31,16 +32,13 @@ export const metadata: Metadata = {
     'Carlos Rojas',
     'Carlos Gerardo Rojas Jaime',
     'Frontend Developer',
+    'Desarrollador Frontend Developer',
     'FullStack Developer',
     'React Developer',
     'Next.js Portfolio',
     'Web Developer',
-    'JavaScript',
-    'TypeScript',
     'Mexico Developer',
-    'Tailwind CSS',
     'Freelance Developer',
-    'UI Engineer',
   ],
   metadataBase: new URL('https://www.carlosrojasj.dev'),
   openGraph: {
@@ -79,8 +77,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.carlosrojasj.dev',
     languages: {
-      en: 'https://www.carlosrojasj.dev/en',
-      es: 'https://www.carlosrojasj.dev/es',
+      en: 'https://www.carlosrojasj.dev',
+      es: 'https://www.carlosrojasj.dev',
     },
   },
   icons: {
@@ -95,21 +93,18 @@ export const metadata: Metadata = {
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: 'en' | 'es' }>;
 };
 
-export default async function RootLayout({ children, params }: LayoutProps) {
-  const { locale } = await params;
-
+export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang={locale}>
+    <html lang='en'>
       <body className={`${poppins.variable} antialiased px-8 sm:px-20`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          <TranslationProvider locale={locale}>
+          <TranslationProvider>
             <Navbar01Page />
             <main className='px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
               {children}
