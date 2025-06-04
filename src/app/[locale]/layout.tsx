@@ -93,14 +93,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
+type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: 'en' | 'es' };
-}>) {
+  params: Promise<{ locale: 'en' | 'es' }>;
+};
+
+export default async function RootLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
+
   return (
     <html lang={locale}>
       <body className={`${poppins.variable} antialiased px-8 sm:px-20`}>
