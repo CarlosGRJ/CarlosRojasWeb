@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import Navbar01Page from '@/components/navbar-01/navbar-01';
 import { TranslationProvider } from '@/context/TranslationProvider';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -78,26 +78,38 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.carlosrojasj.dev',
+    languages: {
+      en: 'https://www.carlosrojasj.dev/en',
+      es: 'https://www.carlosrojasj.dev/es',
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon-32x32.png',
   },
   other: {
     'google-site-verification': 'gS_kudSgpEVfZ4DGN4MdKUYcmLBbgvRUibhuvjvqfbg',
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: 'en' | 'es' };
 }>) {
+  const { locale } = await params;
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body className={`${poppins.variable} antialiased px-8 sm:px-20`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          <TranslationProvider>
+          <TranslationProvider locale={locale}>
             <Navbar01Page />
             <main className='px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
               {children}

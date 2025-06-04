@@ -46,7 +46,7 @@ const Hero1 = ({
   },
 }: Hero1Props) => {
   return (
-    <section className='py-12 sm:py-20'>
+    <section id='home' className='py-12 sm:py-20'>
       <div className='container'>
         <div className='grid items-center gap-8 lg:grid-cols-2'>
           <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>

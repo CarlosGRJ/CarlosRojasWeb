@@ -16,11 +16,17 @@ const Navbar01Page = () => {
       setIsSticky(window.scrollY > 50);
     };
 
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <nav className={`h-16 bg-background border-b ${isSticky ? 'sticky' : ''}`}>
+    <nav
+      className={`h-16 z-50 bg-background border-b transition-all duration-300 ${
+        isSticky ? 'sticky top-0 shadow-sm backdrop-blur' : ''
+      }`}>
       <div className='h-full flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
         <Logo className='w-20 h-14' />
 
@@ -29,7 +35,6 @@ const Navbar01Page = () => {
 
         <div className='flex items-center gap-3'>
           <LightDarkToggle className='sm:inline-flex' />
-
           <LanguageToggle />
 
           {/* Mobile Menu */}
