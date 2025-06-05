@@ -506,4 +506,57 @@ export const projectsEsp: ProjectItem[] = [
       'Angular, RxJS, TypeScript, Jasmine, Karma, PrimeNG, Tailwind, SCSS',
     url: '',
   },
+  {
+    id: 'old-portfolio',
+    title: 'Mi Primer Portafolio Web',
+    summary:
+      'Mi primer portafolio personal desarrollado con React, donde presenté mis primeros proyectos y experimenté con animaciones.',
+    description: (
+      <>
+        <p>
+          Esta fue la primera versión de mi portafolio como desarrollador,
+          creada mientras estudiaba programación. Incluye proyectos realizados
+          en cursos y fue una manera de practicar el desarrollo con React y el
+          diseño centrado en componentes.
+        </p>
+        <ul>
+          <li>🎨 Transiciones y animaciones creativas</li>
+          <li>💡 Diseño limpio para destacar habilidades y proyectos</li>
+          <li>📁 Presentación de proyectos personales y de cursos</li>
+          <li>🚀 Sitio desplegado en Netlify</li>
+        </ul>
+        <p>
+          Aunque actualmente he evolucionado mi portafolio con Next.js y mejores
+          prácticas, este proyecto representa un paso importante en mi camino
+          como desarrollador.
+        </p>
+      </>
+    ),
+    coverImg: '/images/projects/OldPortfolio/01-Home.webp',
+    images: [
+      {
+        src: '/images/projects/OldPortfolio/01-Home.webp',
+        alt: 'Home Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/02-About.webp',
+        alt: 'About Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/03-Skills.webp',
+        alt: 'Skills Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/04-Projects.webp',
+        alt: 'Projects Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/05-Contact.webp',
+        alt: 'Contact Page',
+      },
+    ],
+    role: 'Desarrollador Frontend',
+    techStack: 'React, SCSS, EmailJS, Netlify',
+    url: 'https://carlosgrj.netlify.app/',
+  },
 ];

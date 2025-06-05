@@ -33,11 +33,13 @@ const Hero34 = ({ description }: Hero34Props) => {
 
           <div className='flex flex-wrap gap-4'>
             <Button>
-              <Link href='#contact'>Hire Me</Link>
+              <Link aria-label='Hire Me' href='#contact'>
+                Hire Me
+              </Link>
             </Button>
 
             <Button variant='outlinePrimary' asChild>
-              <a href='/Carlos_Rojas_CV.pdf' download>
+              <a aria-label='Download CV' href='/Carlos_Rojas_CV.pdf' download>
                 Download CV
               </a>
             </Button>

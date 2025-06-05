@@ -49,6 +49,7 @@ const Footer05Page = () => {
             {footerLinks.map(({ title, href }) => (
               <li key={title}>
                 <Link
+                  aria-label={`Go to ${title} section`}
                   href={href}
                   className='text-muted-foreground hover:text-foreground font-medium'>
                   {title}
@@ -65,17 +66,24 @@ const Footer05Page = () => {
           </span>
 
           <div className='flex items-center gap-5 text-muted-foreground'>
-            <Link href='https://github.com/CarlosGRJ' target='_blank'>
+            <Link
+              aria-label='Visit my GitHub profile'
+              href='https://github.com/CarlosGRJ'
+              target='_blank'>
               <FaGithub className='h-5 w-5' />
             </Link>
 
             <Link
+              aria-label='Visit my Instagram profile'
               href='https://www.instagram.com/carloscodebrew'
               target='_blank'>
               <FaInstagram className='h-5 w-5' />
             </Link>
 
-            <Link href='https://www.linkedin.com/in/carlosgrj' target='_blank'>
+            <Link
+              aria-label='Visit my LinkedIn profile'
+              href='https://www.linkedin.com/in/carlosgrj'
+              target='_blank'>
               <FaLinkedinIn className='h-5 w-5' />
             </Link>
           </div>

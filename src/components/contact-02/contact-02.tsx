@@ -120,7 +120,8 @@ const Contact02Page = () => {
                 {t.Contact.Email.Subtitle}
               </p>
               <Link
-                className='font-medium text-primary'
+                aria-label='Send an email to carlosgrjweb@gmail.com'
+                className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
                 href='mailto:carlosgrjweb@gmail.com'>
                 carlosgrjweb@gmail.com
               </Link>
@@ -137,7 +138,8 @@ const Contact02Page = () => {
                 {t.Contact.Phone.Subtitle}
               </p>
               <Link
-                className='font-medium text-primary'
+                aria-label='Call Carlos at +52 55 8573 9469'
+                className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
                 href='tel:+525585739469'>
                 +52 55 8573 9469
               </Link>
@@ -154,6 +156,7 @@ const Contact02Page = () => {
                 {t.Contact.WhatsApp.Subtitle}
               </p>
               <Link
+                aria-label='Start a WhatsApp chat with Carlos'
                 href='https://wa.me/525585739469'
                 target='_blank'
                 rel='noopener noreferrer'

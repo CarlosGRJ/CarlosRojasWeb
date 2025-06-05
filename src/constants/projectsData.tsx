@@ -483,4 +483,57 @@ export const projects: ProjectItem[] = [
       'Angular, RxJS, TypeScript, Jasmine, Karma, PrimeNG, Tailwind, SCSS',
     url: '',
   },
+  {
+    id: 'old-portfolio',
+    title: 'My First Portfolio Website',
+    summary:
+      'My first personal portfolio built with React, showcasing early projects and creative animations.',
+    description: (
+      <>
+        <p>
+          This was the first version of my personal portfolio, developed while I
+          was studying programming. It served as a showcase for course projects
+          and demonstrated my early understanding of React and component-driven
+          development.
+        </p>
+        <ul>
+          <li>🎨 Creative transitions and animations</li>
+          <li>💡 Clean design highlighting projects and skills</li>
+          <li>📁 Early personal and course-based project showcases</li>
+          <li>🚀 Deployed on Netlify</li>
+        </ul>
+        <p>
+          While I’ve since evolved my portfolio using Next.js and best
+          practices, this project remains a key milestone in my development
+          journey.
+        </p>
+      </>
+    ),
+    coverImg: '/images/projects/OldPortfolio/01-Home.webp',
+    images: [
+      {
+        src: '/images/projects/OldPortfolio/01-Home.webp',
+        alt: 'Home Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/02-About.webp',
+        alt: 'About Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/03-Skills.webp',
+        alt: 'Skills Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/04-Projects.webp',
+        alt: 'Projects Page',
+      },
+      {
+        src: '/images/projects/OldPortfolio/05-Contact.webp',
+        alt: 'Contact Page',
+      },
+    ],
+    role: 'Desarrollador Frontend',
+    techStack: 'React, SCSS, EmailJS, Netlify',
+    url: 'https://carlosgrj.netlify.app/',
+  },
 ];
