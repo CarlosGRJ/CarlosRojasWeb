@@ -5,6 +5,7 @@ import { TranslationProvider } from '@/context/TranslationProvider';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import { Toaster } from '@/components/ui/sonner';
+import { Analytics } from '@vercel/analytics/next';
 
 import 'yet-another-react-lightbox/styles.css';
 import Footer05Page from '@/components/footer-05/footer-05';
@@ -108,6 +109,7 @@ export default function RootLayout({ children }: LayoutProps) {
             <Navbar01Page />
             <main className='px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
               {children}
+              <Analytics />
             </main>
             <Footer05Page />
             <Toaster richColors />
