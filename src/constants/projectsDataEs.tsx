@@ -2,6 +2,71 @@ import { ProjectItem } from '@/types/portfolio';
 
 export const projectsEsp: ProjectItem[] = [
   {
+    id: 'landing-ecommerce',
+    title: 'Landing Page Arigio Audio e Iluminación',
+    summary:
+      'Diseñé y desarrollé una landing page moderna para Arigio Audio e Iluminación, enfocada en la presentación clara y atractiva de productos de audio e iluminación profesional.',
+    description: (
+      <>
+        <p>
+          Esta landing page fue creada para exhibir el catálogo de productos de
+          una empresa especializada en soluciones profesionales de audio,
+          iluminación, estructuras y efectos visuales. El sitio fue diseñado
+          para facilitar la navegación y destacar las principales categorías del
+          catálogo.
+        </p>
+        <ul>
+          <li>🔊 Muestra visual de productos categorizados por tipo</li>
+          <li>⚡️ Carga optimizada con imágenes en formato WebP</li>
+          <li>🎯 Navegación intuitiva con diseño responsive</li>
+          <li>🔒 Protección con Cloudflare y optimización SEO</li>
+          <li>📱 Botón de contacto directo por WhatsApp</li>
+        </ul>
+        <p>
+          El objetivo fue crear una experiencia fluida para potenciales clientes
+          interesados en venta de equipo, priorizando el rendimiento, la
+          claridad del contenido y la conversión sin necesidad de carrito ni
+          backend e-commerce completo.
+        </p>
+      </>
+    ),
+    coverImg:
+      'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200906/01-home_vzormu.webp',
+    images: [
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200906/01-home_vzormu.webp',
+        alt: 'Arigio Audio Home Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200907/02-categories-section_c2rmir.webp',
+        alt: 'Arigio Audio Categories Section',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200905/03-products-section_r9bir4.webp',
+        alt: 'Arigio Audio Products Section',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200904/04-contact-section_x4wdg0.webp',
+        alt: 'Arigio Audio Contact Section',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200904/05-google-map_yqptdd.webp',
+        alt: 'Arigio Audio Google Map Section',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200907/06-search-page_hcleva.webp',
+        alt: 'Arigio Audio Search Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1754200904/07-product-page_ocrao9.webp',
+        alt: 'Arigio Audio Product Page',
+      },
+    ],
+    role: 'Desarrollador Full Stack',
+    techStack: 'Next.js, Shadcn, Tailwind, TypeScript, Vercel, Cloudflare',
+    url: 'https://www.arigioaudioeiluminacion.com.mx/',
+  },
+  {
     id: 'carteras',
     title: 'Carteras Landing Page',
     summary:
