@@ -2,6 +2,120 @@ import { ProjectItem } from '@/types/portfolio';
 
 export const projects: ProjectItem[] = [
   {
+    id: 'tejiendo-historias',
+    title: 'Tejiendo Historias',
+    summary:
+      'Full-stack psychotherapy platform with admin dashboard for managing blog posts and appointments, built with Next.js, Supabase, and Cloudflare.',
+    description: (
+      <>
+        <p>
+          Tejiendo Historias is a full-stack web platform designed for a
+          psychotherapy project to connect with patients and share therapeutic
+          insights. The site includes a public interface for reading blog posts,
+          learning about services, and booking appointments, as well as a secure
+          admin dashboard for managing posts and appointments.
+        </p>
+        <p>
+          Built with <strong>Next.js 15</strong> and <strong>TypeScript</strong>
+          , the platform integrates <strong>Supabase</strong> as a backend (with
+          PostgreSQL, Auth, and Storage), implementing{' '}
+          <strong>Row-Level Security (RLS)</strong> policies for data
+          protection. It was deployed on <strong>Vercel</strong> with{' '}
+          <strong>Cloudflare</strong> providing CDN and security layers, and SEO
+          was optimized to improve visibility for therapy-related searches.
+        </p>
+        <ul>
+          <li>
+            Admin dashboard with full CRUD for blog posts and appointments
+          </li>
+          <li>
+            Responsive and accessible UI built with Tailwind CSS and ShadCN/UI
+          </li>
+          <li>SEO optimization and Cloudflare CDN for performance</li>
+          <li>
+            PostgreSQL database with relational tables and secure policies
+          </li>
+        </ul>
+      </>
+    ),
+    coverImg:
+      'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/01-home_jy2x2f.webp',
+    images: [
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/01-home_jy2x2f.webp',
+        alt: 'Tejiendo Historias Home Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/02-home_xpnmls.webp',
+        alt: 'Tejiendo Historias Home Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/03-home_n6mx0x.webp',
+        alt: 'Tejiendo Historias Home Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/04-home_z9yn87.webp',
+        alt: 'Tejiendo Historias Home Page 4',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/05-schedule-form_i9voyo.webp',
+        alt: 'Tejiendo Historias Schedule Form',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/06-about_stkxvu.webp',
+        alt: 'Tejiendo Historias About Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830194/08-about_ktwtyt.webp',
+        alt: 'Tejiendo Historias About Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830195/09-about_pi4rmn.webp',
+        alt: 'Tejiendo Historias About Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830193/10-blog_ylbcnb.webp',
+        alt: 'Tejiendo Historias Blog Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830195/11-blog_oajv1c.webp',
+        alt: 'Tejiendo Historias Blog Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/12-blog_ipxmuh.webp',
+        alt: 'Tejiendo Historias Blog Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/13-contact_uvev9p.webp',
+        alt: 'Tejiendo Historias Contact Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830191/14-footer_fczunc.webp',
+        alt: 'Tejiendo Historias Footer',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/15-new-post_ysaeum.webp',
+        alt: 'Tejiendo Historias New Post Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/16-appointments-dashboard_tobutn.webp',
+        alt: 'Tejiendo Historias Appointments Dashboard',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830191/17-admin-create-appointment_ku9jxh.webp',
+        alt: 'Tejiendo Historias Admin Create Appointment Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830193/18-edit-delete-post_bcwybv.webp',
+        alt: 'Tejiendo Historias Admin Edit/Delete Post Page',
+      },
+    ],
+    role: 'Full Stack Developer',
+    techStack:
+      'Next.js 15, TypeScript, Tailwind CSS, ShadCN/UI, Supabase (PostgreSQL, Auth, Storage), Cloudflare, Vercel',
+    url: 'https://www.tejiendohistoriaas.com.mx/',
+  },
+  {
     id: 'landing-ecommerce',
     title: 'Landing Page Arigio Audio e Iluminación',
     summary:
@@ -23,9 +137,9 @@ export const projects: ProjectItem[] = [
         </ul>
         <p>
           The goal was to create a smooth user experience for potential
-          customers interested in buying equipment, prioritizing
-          performance, content clarity, and conversions—without the need for a
-          full e-commerce backend.
+          customers interested in buying equipment, prioritizing performance,
+          content clarity, and conversions—without the need for a full
+          e-commerce backend.
         </p>
       </>
     ),

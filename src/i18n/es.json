@@ -14,11 +14,13 @@
     "Title": "Hola, soy Carlos",
     "Description": "Creo sitios web rápidos y responsivos, y aplicaciones web a medida que ayudan a las empresas a crecer en línea.",
     "Badge": "✨ Construyamos algo increíble",
-    "Hire": "Contrátame"
+    "Hire": "Contrátame",
+    "DownloadCV": "Descargar CV",
+    "ViewOnGitHub": "Ver en GitHub"
   },
   "About": {
     "Title": "Sobre Mí",
-    "Description": "Hola, soy Carlos, desarrollador full stack de aplicaciones web y móviles, con base en la Ciudad de México. Me especializo en construir soluciones escalables y de alto rendimiento, con código limpio y un fuerte enfoque en la experiencia del usuario.\n\nHe trabajado en empresas como The Home Depot, Indra y Tich Solutions, participando en proyectos que van desde plataformas de comercio electrónico hasta sistemas empresariales. He liderado equipos frontend, colaborado en entornos internacionales y desarrollado componentes reutilizables y listos para producción usando tecnologías como React, Next.js, Node.js, TypeScript, GraphQL y SCSS.\n\nMe importa la calidad del código, el rendimiento y el diseño. Disfruto resolver problemas complejos y dar vida a ideas a través de soluciones bien pensadas, eficientes y mantenibles.\n\nConstruyamos algo increíble juntos."
+    "Description": "Hola, soy Carlos, desarrollador full stack de aplicaciones web y móviles, con base en la Ciudad de México. Me especializo en construir soluciones escalables y de alto rendimiento, con código limpio y un fuerte enfoque en la experiencia del usuario.\n\nHe trabajado en empresas como Realtor, The Home Depot, Indra y Tich Solutions, participando en proyectos que van desde plataformas de comercio electrónico hasta sistemas empresariales. He liderado equipos frontend, colaborado en entornos internacionales y desarrollado componentes reutilizables y listos para producción usando tecnologías como React, Next.js, Node.js, TypeScript, GraphQL y SCSS.\n\nMe importa la calidad del código, el rendimiento y el diseño. Disfruto resolver problemas complejos y dar vida a ideas a través de soluciones bien pensadas, eficientes y mantenibles.\n\nConstruyamos algo increíble juntos."
   },
   "Services": {
     "Title": "Servicios",
@@ -58,6 +60,34 @@
   "Experience": {
     "Title": "Experiencia",
     "List": [
+      {
+        "id": "TAVANT",
+        "date": "Jul 2025 - Presente",
+        "role": "Desarrollador Full Stack Senior",
+        "company": "Tavant (contratista para Realtor.com)",
+        "descriptions": [
+          {
+            "id": "TAVANT1",
+            "desc": "Desarrollé utilidades en Node.js para automatizar pruebas de rendimiento con Sitespeed.io y Docker."
+          },
+          {
+            "id": "TAVANT2",
+            "desc": "Optimicé pipelines de CI/CD en CircleCI y mejoré la confiabilidad de builds mediante YAML y Docker."
+          },
+          {
+            "id": "TAVANT3",
+            "desc": "Aumenté la cobertura de pruebas con Jest y React Testing Library, reforzando la calidad en SonarQube."
+          },
+          {
+            "id": "TAVANT4",
+            "desc": "Documenté y estandaricé flujos de trabajo técnicos para mejorar la colaboración entre equipos."
+          },
+          {
+            "id": "TAVANT5",
+            "desc": "Participando en la migración a Vite y Storybook y preparando contribuciones en React y Next.js."
+          }
+        ]
+      },
       {
         "id": "THD",
         "date": "Sep 2024 - Feb 2025",
@@ -130,7 +160,14 @@
           }
         ]
       }
-    ]
+    ],
+    "ViewProject": "Ver Proyecto"
+  },
+  "Portfolio": {
+    "ViewProject": "Ver Proyecto",
+    "VisitLiveSite": "Visitar Sitio Web",
+    "LiveSiteNotAvailable": "Sitio web no disponible.",
+    "Close": "Cerrar"
   },
   "Contact": {
     "Title": "Contáctame",

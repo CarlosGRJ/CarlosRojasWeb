@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { ProjectItem } from '@/types/portfolio';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useTranslation } from '@/context/TranslationProvider';
 
 export type PortfolioDialogProps = {
   project: ProjectItem;
@@ -29,6 +30,8 @@ export default function PortfolioDialog({
   const [dialogOpen, setDialogOpen] = useState(!!project);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [index, setIndex] = useState(0);
+
+  const { t } = useTranslation();
 
   const toggleLightbox = (state: boolean) => () => setLightboxOpen(state);
 
@@ -140,13 +143,13 @@ export default function PortfolioDialog({
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-block px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition'>
-                Visit Live Site
+                {t.Portfolio.VisitLiveSite}
               </Link>
             )}
 
             {!project.url && !project.isInternal && (
               <p className='text-sm text-muted-foreground'>
-                Live site not available.
+                {t.Portfolio.LiveSiteNotAvailable}
               </p>
             )}
 
@@ -158,7 +161,7 @@ export default function PortfolioDialog({
                     setDialogOpen(false);
                     onClose();
                   }}>
-                  Close
+                  {t.Portfolio.Close}
                 </Button>
               </DialogClose>
             </div>

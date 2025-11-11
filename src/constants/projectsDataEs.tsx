@@ -2,6 +2,115 @@ import { ProjectItem } from '@/types/portfolio';
 
 export const projectsEsp: ProjectItem[] = [
   {
+    id: 'tejiendo-historias',
+    title: 'Tejiendo Historias',
+    summary:
+      'Plataforma web full-stack para psicoterapia con panel administrativo para gestionar publicaciones y citas, desarrollada con Next.js, Supabase y Cloudflare.',
+    description: (
+      <>
+        <p>
+          Tejiendo Historias es una plataforma web full-stack creada para un
+          proyecto de psicoterapia, enfocada en ofrecer información terapéutica,
+          publicar artículos y facilitar la gestión de citas con pacientes. El
+          sitio cuenta con una interfaz pública y un panel administrativo seguro
+          para administrar entradas del blog y citas.
+        </p>
+        <p>
+          Desarrollado con <strong>Next.js 15</strong> y{' '}
+          <strong>TypeScript</strong>, el proyecto utiliza{' '}
+          <strong>Supabase</strong> como backend (PostgreSQL, Auth y Storage),
+          implementando políticas de{' '}
+          <strong>seguridad por nivel de fila (RLS)</strong> para proteger los
+          datos. El sitio se aloja en
+          <strong> Vercel</strong> y se protege con <strong>Cloudflare</strong>,
+          optimizando su rendimiento y posicionamiento SEO.
+        </p>
+        <ul>
+          <li>Panel admin con CRUD completo de publicaciones y citas</li>
+          <li>Interfaz responsiva y accesible con Tailwind CSS y ShadCN/UI</li>
+          <li>Optimización SEO y CDN de Cloudflare</li>
+          <li>Base de datos relacional en Supabase con políticas RLS</li>
+        </ul>
+      </>
+    ),
+    coverImg:
+      'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/01-home_jy2x2f.webp',
+    images: [
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/01-home_jy2x2f.webp',
+        alt: 'Tejiendo Historias Home Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/02-home_xpnmls.webp',
+        alt: 'Tejiendo Historias Home Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/03-home_n6mx0x.webp',
+        alt: 'Tejiendo Historias Home Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/04-home_z9yn87.webp',
+        alt: 'Tejiendo Historias Home Page 4',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/05-schedule-form_i9voyo.webp',
+        alt: 'Tejiendo Historias Schedule Form',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830182/06-about_stkxvu.webp',
+        alt: 'Tejiendo Historias About Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830194/08-about_ktwtyt.webp',
+        alt: 'Tejiendo Historias About Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830195/09-about_pi4rmn.webp',
+        alt: 'Tejiendo Historias About Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830193/10-blog_ylbcnb.webp',
+        alt: 'Tejiendo Historias Blog Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830195/11-blog_oajv1c.webp',
+        alt: 'Tejiendo Historias Blog Page 2',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/12-blog_ipxmuh.webp',
+        alt: 'Tejiendo Historias Blog Page 3',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/13-contact_uvev9p.webp',
+        alt: 'Tejiendo Historias Contact Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830191/14-footer_fczunc.webp',
+        alt: 'Tejiendo Historias Footer',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/15-new-post_ysaeum.webp',
+        alt: 'Tejiendo Historias New Post Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830192/16-appointments-dashboard_tobutn.webp',
+        alt: 'Tejiendo Historias Appointments Dashboard',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830191/17-admin-create-appointment_ku9jxh.webp',
+        alt: 'Tejiendo Historias Admin Create Appointment Page',
+      },
+      {
+        src: 'https://res.cloudinary.com/ddw9cg3ds/image/upload/v1762830193/18-edit-delete-post_bcwybv.webp',
+        alt: 'Tejiendo Historias Admin Edit/Delete Post Page',
+      },
+    ],
+    role: 'Desarrollador Full Stack',
+    techStack:
+      'Next.js 15, TypeScript, Tailwind CSS, ShadCN/UI, Supabase (PostgreSQL, Auth, Storage), Cloudflare, Vercel',
+    url: 'https://www.tejiendohistoriaas.com.mx/',
+  },
+  {
     id: 'landing-ecommerce',
     title: 'Landing Page Arigio Audio e Iluminación',
     summary:

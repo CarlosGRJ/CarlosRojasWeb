@@ -14,11 +14,13 @@
     "Title": "Hi, I’m Carlos",
     "Description": "I create fast, responsive websites and custom web apps that help businesses grow online.",
     "Badge": "✨ Let’s Build Something Great",
-    "Hire": "Hire me"
+    "Hire": "Hire me",
+    "DownloadCV": "Download Resume",
+    "ViewOnGitHub": "View on GitHub"
   },
   "About": {
     "Title": "About Me",
-    "Description": "Hi, I’m Carlos, a full-stack web and mobile developer based in Mexico City. I specialize in building scalable, high-performance applications with clean code and a strong focus on user experience.\n\nWith experience at companies like The Home Depot, Indra, and Tich Solutions, I’ve worked on projects ranging from e-commerce platforms to enterprise systems. I’ve led frontend teams, collaborated in international environments, and built reusable, production-ready components using technologies like React, Next.js, Node.js, TypeScript, GraphQL, and SCSS.\n\nI care deeply about code quality, performance, and design. I enjoy solving complex problems and bringing ideas to life through thoughtful, efficient, and maintainable solutions.\n\nLet’s build something amazing together."
+    "Description": "Hi, I’m Carlos, a full-stack web and mobile developer based in Mexico City. I specialize in building scalable, high-performance applications with clean code and a strong focus on user experience.\n\nWith experience at companies like Realtor, The Home Depot, Indra, and Tich Solutions, I’ve worked on projects ranging from e-commerce platforms to enterprise systems. I’ve led frontend teams, collaborated in international environments, and built reusable, production-ready components using technologies like React, Next.js, Node.js, TypeScript, GraphQL, and SCSS.\n\nI care deeply about code quality, performance, and design. I enjoy solving complex problems and bringing ideas to life through thoughtful, efficient, and maintainable solutions.\n\nLet’s build something amazing together."
   },
   "Services": {
     "Title": "Services",
@@ -58,6 +60,34 @@
   "Experience": {
     "Title": "Experience",
     "List": [
+      {
+        "id": "TAVANT",
+        "date": "Jul 2024 - Present",
+        "role": "Senior Full Stack Developer",
+        "company": "Tavant (contractor for Realtor.com)",
+        "descriptions": [
+          {
+            "id": "TAVANT1",
+            "desc": "Built Node.js utilities to automate performance testing workflows using Sitespeed.io and Docker."
+          },
+          {
+            "id": "TAVANT2",
+            "desc": "Optimized CI/CD pipelines in CircleCI, improving build reliability through refined YAML and Docker setups."
+          },
+          {
+            "id": "TAVANT3",
+            "desc": "Increased test coverage with Jest and React Testing Library, strengthening quality gates in SonarQube."
+          },
+          {
+            "id": "TAVANT4",
+            "desc": "Documented and standardized technical workflows to enhance cross-team collaboration."
+          },
+          {
+            "id": "TAVANT5",
+            "desc": "Contributing to Vite and Storybook migrations and preparing for React and Next.js frontend initiatives."
+          }
+        ]
+      },
       {
         "id": "THD",
         "date": "Sep 2024 - Feb 2025",
@@ -131,6 +161,12 @@
         ]
       }
     ]
+  },
+  "Portfolio": {
+    "ViewProject": "View Project",
+    "VisitLiveSite": "Visit Live Site",
+    "LiveSiteNotAvailable": "Live site not available.",
+    "Close": "Close"
   },
   "Contact": {
     "Title": "Get in Touch",

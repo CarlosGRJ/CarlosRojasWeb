@@ -11,7 +11,7 @@ import { projectsEsp } from '@/constants/projectsDataEs';
 import { LanguageEnum } from '@/types/language';
 
 export default function PortfolioSection() {
-  const { locale } = useTranslation();
+  const { locale, t } = useTranslation();
 
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
@@ -24,7 +24,7 @@ export default function PortfolioSection() {
       id='portfolio'
       className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
       <h2 className='text-4xl font-bold mb-6 border-b-4 border-primary pb-2'>
-        Portfolio
+        {t.Header.Portfolio}
       </h2>
 
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mt-12'>
@@ -54,7 +54,7 @@ export default function PortfolioSection() {
               <Button
                 onClick={() => setSelectedProject(project)}
                 aria-label={`View screenshots of ${project.title}`}>
-                View Project
+                {t.Portfolio.ViewProject}
               </Button>
             </div>
           </article>

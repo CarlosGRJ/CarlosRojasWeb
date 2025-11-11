@@ -27,7 +27,7 @@ export default function Home() {
             url: '#contact',
           },
           secondary: {
-            text: 'View on GitHub',
+            text: t.Home.ViewOnGitHub,
             url: 'https://github.com/CarlosGRJ',
           },
         }}
