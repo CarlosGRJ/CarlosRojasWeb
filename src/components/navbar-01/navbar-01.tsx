@@ -24,10 +24,11 @@ const Navbar01Page = () => {
 
   return (
     <nav
-      className={`h-16 z-50 bg-background border-b transition-all duration-300 ${
-        isSticky ? 'sticky top-0 backdrop-blur' : ''
+      aria-label='Primary'
+      className={`z-50 h-16 w-screen -mx-[calc(50vw-50%)] border-b border-foreground/10 bg-background/80 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
+        isSticky ? 'sticky top-0 shadow-sm' : ''
       }`}>
-      <div className='h-full flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto flex h-full max-w-screen-xl items-center justify-between px-8 sm:px-20'>
         <Logo className='w-20 h-14' />
 
         {/* Desktop Menu */}
