@@ -26,32 +26,32 @@
     "Title": "Services",
     "Services": [
       {
-        "id": "1",
+        "id": "web",
         "title": "Web Application Development",
         "desc": "I build modern, scalable, and responsive web apps using React, Next.js, and Node.js — optimized for performance and SEO."
       },
       {
-        "id": "2",
+        "id": "mobile",
         "title": "Mobile App Development",
         "desc": "Cross-platform mobile apps using React Native that feel native and deliver fast, smooth user experiences on both iOS and Android."
       },
       {
-        "id": "3",
+        "id": "frontend",
         "title": "Frontend Architecture",
         "desc": "Clean, maintainable component architecture with SCSS or Tailwind."
       },
       {
-        "id": "4",
+        "id": "backend",
         "title": "Backend APIs & Database Integration",
         "desc": "REST and GraphQL APIs with Node.js, Express, Firebase, or MongoDB — fully integrated with your frontend or third-party services."
       },
       {
-        "id": "5",
+        "id": "portfolio",
         "title": "Portfolio & Landing Page Development",
         "desc": "Fast, SEO-ready landing pages or portfolios with custom design, animations, and admin panels to manage content."
       },
       {
-        "id": "6",
+        "id": "cms",
         "title": "CMS Integration or Admin Dashboards",
         "desc": "Admin tools to update your site with no code. Firebase, headless CMS, or custom-made interfaces using React or Next.js."
       }
@@ -62,7 +62,7 @@
     "List": [
       {
         "id": "TAVANT",
-        "date": "Jul 2024 - Present",
+        "date": "Jul 2025 - Present",
         "role": "Senior Full Stack Developer",
         "company": "Tavant (contractor for Realtor.com)",
         "descriptions": [

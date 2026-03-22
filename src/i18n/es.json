@@ -26,32 +26,32 @@
     "Title": "Servicios",
     "Services": [
       {
-        "id": "1",
+        "id": "web",
         "title": "Desarrollo de Aplicaciones Web",
         "desc": "Desarrollo aplicaciones web modernas, escalables y responsivas con tecnologías como React, Next.js y TypeScript, optimizadas para rendimiento y SEO."
       },
       {
-        "id": "2",
+        "id": "mobile",
         "title": "Desarrollo de Aplicaciones Móviles",
         "desc": "Creo apps móviles para iOS y Android usando React Native, enfocadas en velocidad, experiencia de usuario fluida y compatibilidad entre dispositivos."
       },
       {
-        "id": "3",
+        "id": "frontend",
         "title": "Diseño de Interfaces y Arquitectura Frontend",
         "desc": "Construyo interfaces accesibles, reutilizables y bien estructuradas con SCSS, Tailwind o styled-components. Implemento patrones escalables y diseño centrado en el usuario."
       },
       {
-        "id": "4",
+        "id": "backend",
         "title": "APIs Backend e Integración con Bases de Datos",
         "desc": "Desarrollo APIs REST y GraphQL con Node.js, Express, MongoDB o Firebase, conectando frontend y backend de forma eficiente y segura."
       },
       {
-        "id": "5",
+        "id": "portfolio",
         "title": "Landing Pages y Portafolios Personalizados",
         "desc": "Páginas web optimizadas, responsivas y listas para posicionamiento SEO. Ideales para proyectos personales, negocios o marcas profesionales."
       },
       {
-        "id": "6",
+        "id": "cms",
         "title": "Paneles de Administración y CMS Personalizados",
         "desc": "Desarrollo paneles administrativos o integro CMS sin código para que puedas gestionar tu contenido fácilmente sin depender de un desarrollador."
       }
