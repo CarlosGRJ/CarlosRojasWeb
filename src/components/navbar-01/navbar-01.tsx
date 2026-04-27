@@ -11,6 +11,7 @@ import LanguageToggle from '../ui/language-toggle';
 const SECTION_IDS = [
   'home',
   'about',
+  'skills',
   'services',
   'experience',
   'portfolio',

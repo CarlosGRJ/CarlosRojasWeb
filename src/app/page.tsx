@@ -3,6 +3,7 @@
 import Contact02Page from '@/components/contact-02/contact-02';
 import { Hero1 } from '@/components/hero1';
 import { Hero34 } from '@/components/hero34';
+import SkillsSection from '@/components/skills-section';
 import ServicesSection from '@/components/service-section';
 import ExperienceSection from '@/components/experience-section';
 import PortfolioSection from '@/components/portfolio-section';
@@ -34,6 +35,8 @@ export default function Home() {
       />
 
       <Hero34 description={t.About.Description} />
+
+      <SkillsSection />
 
       <ServicesSection />
 

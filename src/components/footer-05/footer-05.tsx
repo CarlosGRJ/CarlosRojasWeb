@@ -21,6 +21,10 @@ const Footer05Page = () => {
       href: '#about',
     },
     {
+      title: t.Header.Skills,
+      href: '#skills',
+    },
+    {
       title: t.Header.Services,
       href: '#services',
     },

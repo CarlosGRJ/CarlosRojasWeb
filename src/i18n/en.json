@@ -5,6 +5,7 @@
   "Header": {
     "Home": "Home",
     "About": "About me",
+    "Skills": "Skills",
     "Services": "Services",
     "Experience": "Experience",
     "Portfolio": "Portfolio",
@@ -221,6 +222,16 @@
         }
       }
     }
+  },
+  "Skills": {
+    "Title": "Skills & Technologies",
+    "technologies": "technologies",
+    "areas": "areas",
+    "frontend": "Frontend",
+    "backend": "Backend & APIs",
+    "ai": "AI & LLMs",
+    "database": "Databases & Cloud",
+    "testing": "Testing & Tools"
   },
   "Footer": {
     "Copyright": "Developed by Carlos Rojas. All rights reserved."

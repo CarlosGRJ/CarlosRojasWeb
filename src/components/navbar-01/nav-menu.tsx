@@ -18,6 +18,7 @@ type NavMenuProps = NavigationMenuProps & {
 const NAV_LINKS = [
   { id: 'home', labelKey: 'Home' },
   { id: 'about', labelKey: 'About' },
+  { id: 'skills', labelKey: 'Skills' },
   { id: 'services', labelKey: 'Services' },
   { id: 'experience', labelKey: 'Experience' },
   { id: 'portfolio', labelKey: 'Portfolio' },
