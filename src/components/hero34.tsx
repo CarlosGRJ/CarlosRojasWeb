@@ -35,14 +35,12 @@ const Hero34 = ({ description }: Hero34Props) => {
           </p>
 
           <div className='flex flex-wrap gap-4'>
-            <Button>
-              <Link aria-label='Hire Me' href='#contact'>
-                {t.Home.Hire}
-              </Link>
+            <Button asChild>
+              <Link href='#contact'>{t.Home.Hire}</Link>
             </Button>
 
             <Button variant='outlinePrimary' asChild>
-              <a aria-label='Download CV' href='/Carlos_Rojas_CV.pdf' download>
+              <a href='/Carlos_Rojas_CV.pdf' download aria-label={`${t.Home.DownloadCV} — PDF`}>
                 {t.Home.DownloadCV}
               </a>
             </Button>

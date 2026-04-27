@@ -23,7 +23,7 @@ export default function ServicesSection() {
             className='bg-background text-foreground border border-gray-300 dark:border-gray-700 rounded-xl p-6 
                  shadow-none hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
                  flex flex-col gap-4 text-center sm:text-left items-center sm:items-baseline'>
-            <div className='text-3xl mb-4 w-30 h-30'>{service.icon}</div>
+            <div className='text-3xl mb-4 w-30 h-30' aria-hidden='true'>{service.icon}</div>
             <h3 className='text-xl font-semibold mb-2'>
               {t.Services.Services[i].title}
             </h3>

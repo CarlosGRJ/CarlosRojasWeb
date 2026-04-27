@@ -53,7 +53,7 @@ export default function PortfolioSection() {
               </p>
               <Button
                 onClick={() => setSelectedProject(project)}
-                aria-label={`View screenshots of ${project.title}`}>
+                aria-label={`${t.Portfolio.ViewProject}: ${project.title}`}>
                 {t.Portfolio.ViewProject}
               </Button>
             </div>

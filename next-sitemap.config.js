@@ -2,4 +2,6 @@
 module.exports = {
   siteUrl: 'https://www.carlosrojasj.dev/',
   generateRobotsTxt: true,
+  changefreq: 'monthly',
+  priority: 1.0,
 };

@@ -21,15 +21,13 @@ export default function ExperienceSection() {
             key={exp.id}
             className='bg-background border border-gray-300 dark:border-gray-700 p-8 transition-all hover:bg-primary'>
             <div>
-              <span className='block text-sm font-medium opacity-75 mb-2'>
+              <time className='block text-sm font-medium opacity-75 mb-2'>
                 {exp.date}
-              </span>
+              </time>
               <CardTitle>
                 <h3 className='text-2xl font-semibold mb-1'>{exp.role}</h3>
               </CardTitle>
-              <span className='text-md text-muted-foreground'>
-                {exp.company}
-              </span>
+              <p className='text-md text-muted-foreground'>{exp.company}</p>
             </div>
 
             <CardDescription className='text-foreground'>

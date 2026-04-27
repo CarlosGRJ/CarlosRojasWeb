@@ -14,16 +14,18 @@ export const NavigationSheet = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant='outline' size='icon'>
-          <Menu />
+        <Button variant='outline' size='icon' aria-label='Open navigation menu'>
+          <Menu aria-hidden='true' />
         </Button>
       </SheetTrigger>
       <SheetContent>
         <SheetTitle>
           <Logo className='w-20 h-14' />
         </SheetTitle>
+        <SheetDescription className='sr-only'>
+          Site navigation links
+        </SheetDescription>
         <NavMenu orientation='vertical' className='mt-12 items-start' />
-        <SheetDescription></SheetDescription>
       </SheetContent>
     </Sheet>
   );

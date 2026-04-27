@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowUpRight } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
@@ -5,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useTranslation } from '@/context/TranslationProvider';
 
 interface Hero1Props {
   badge?: string;
@@ -45,6 +48,8 @@ const Hero1 = ({
     alt: '',
   },
 }: Hero1Props) => {
+  const { t } = useTranslation();
+
   return (
     <section id='home' className='relative py-16 sm:py-24'>
       <div className='pointer-events-none absolute inset-0 left-1/2 -z-10 w-[100vw] -translate-x-1/2'>
@@ -77,9 +82,7 @@ const Hero1 = ({
             <div className='flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start'>
               {buttons.primary && (
                 <Button asChild className='w-full sm:w-auto'>
-                  <Link
-                    aria-label={`Primary action: ${buttons.primary.text}`}
-                    href={buttons.primary.url}>
+                  <Link href={buttons.primary.url}>
                     {buttons.primary.text}
                   </Link>
                 </Button>
@@ -87,23 +90,22 @@ const Hero1 = ({
               {buttons.secondary && (
                 <Button asChild variant='outline' className='w-full sm:w-auto'>
                   <Link
-                    aria-label={`View project on GitHub: ${buttons.secondary.text}`}
                     href={buttons.secondary.url}
                     target='_blank'
                     rel='noopener noreferrer'>
                     {buttons.secondary.text}
-                    <FaGithub className='size-4' />
+                    <FaGithub className='size-4' aria-hidden='true' />
                   </Link>
                 </Button>
               )}
             </div>
             <dl className='mt-8 grid w-full max-w-md grid-cols-2 gap-4 text-left text-sm'>
               <div className='rounded-xl border bg-background/90 p-4 shadow-sm'>
-                <dt className='text-foreground/60'>Years of experience</dt>
-                <dd className='mt-2 text-2xl font-semibold'>6+ years</dd>
+                <dt className='text-foreground/60'>{t.Home.YearsExperience}</dt>
+                <dd className='mt-2 text-2xl font-semibold'>6+</dd>
               </div>
               <div className='rounded-xl border bg-background/90 p-4 shadow-sm'>
-                <dt className='text-foreground/60'>Find me on</dt>
+                <dt className='text-foreground/60'>{t.Home.FindMeOn}</dt>
                 <dd className='mt-3 flex items-center gap-3'>
                   <Link
                     href='https://www.linkedin.com/in/carlosgrj/'

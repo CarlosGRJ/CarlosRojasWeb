@@ -18,49 +18,37 @@ export const NavMenu = (props: NavigationMenuProps) => {
       <NavigationMenuList className='gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start'>
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to home section' href='#home'>
-              {t.Header.Home}
-            </Link>
+            <Link href='#home'>{t.Header.Home}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to about section' href='#about'>
-              {t.Header.About}
-            </Link>
+            <Link href='#about'>{t.Header.About}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to services section' href='#services'>
-              {t.Header.Services}
-            </Link>
+            <Link href='#services'>{t.Header.Services}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to experience section' href='#experience'>
-              {t.Header.Experience}
-            </Link>
+            <Link href='#experience'>{t.Header.Experience}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to portfolio section' href='#portfolio'>
-              {t.Header.Portfolio}
-            </Link>
+            <Link href='#portfolio'>{t.Header.Portfolio}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link aria-label='Go to contact section' href='#contact'>
-              {t.Header.Contact}
-            </Link>
+            <Link href='#contact'>{t.Header.Contact}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

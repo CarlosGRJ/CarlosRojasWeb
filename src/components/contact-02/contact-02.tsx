@@ -101,16 +101,16 @@ const Contact02Page = () => {
       </h2>
 
       <div className='text-center sm:text-start'>
-        <b className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
+        <strong className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
           {t.Contact.Headline}
-        </b>
+        </strong>
 
         <p className='mt-3 text-base sm:text-lg'>{t.Contact.Subheadline}</p>
 
         <div className='mt-24 grid lg:grid-cols-2 gap-16 md:gap-10'>
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 text-center sm:text-start'>
             <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
+              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
                 <MailIcon />
               </div>
               <h3 className='mt-6 font-semibold text-xl'>
@@ -128,7 +128,7 @@ const Contact02Page = () => {
             </div>
 
             <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
+              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
                 <PhoneIcon />
               </div>
               <h3 className='mt-6 font-semibold text-xl'>
@@ -146,7 +146,7 @@ const Contact02Page = () => {
             </div>
 
             <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'>
+              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
                 <MessageSquareText />
               </div>
               <h3 className='mt-6 font-semibold text-xl'>
@@ -181,7 +181,6 @@ const Contact02Page = () => {
                       name='firstName'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label={t.Contact.Form.FirstName}
                     />
                   </div>
 
@@ -193,7 +192,6 @@ const Contact02Page = () => {
                       name='lastName'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label={t.Contact.Form.LastName}
                     />
                   </div>
                   <div className='col-span-2'>
@@ -205,7 +203,6 @@ const Contact02Page = () => {
                       name='email'
                       className='mt-1.5 bg-white h-11 shadow-none'
                       required
-                      aria-label={t.Contact.Form.Email}
                     />
                   </div>
                   <div className='col-span-2'>
@@ -217,7 +214,6 @@ const Contact02Page = () => {
                       className='mt-1.5 bg-white shadow-none'
                       rows={6}
                       required
-                      aria-label={t.Contact.Form.Message}
                     />
                   </div>
 
@@ -235,18 +231,20 @@ const Contact02Page = () => {
                   </div>
                 </div>
 
-                {error && <p className='text-red-600 mt-4'>{error}</p>}
+                {error && (
+                  <p role='alert' className='text-red-600 mt-4'>{error}</p>
+                )}
                 {sent && (
-                  <p className='text-green-600 mt-4'>
+                  <p role='status' className='text-green-600 mt-4'>
                     {t.Contact.Form.Success}
                   </p>
                 )}
 
                 <Button
+                  type='submit'
                   className='mt-6 w-full'
                   size='lg'
-                  disabled={loading}
-                  aria-label={t.Contact.Form.Send}>
+                  disabled={loading}>
                   {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
                 </Button>
               </form>
