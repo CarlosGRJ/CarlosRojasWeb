@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Logo } from './logo';
 import { NavMenu } from './nav-menu';
@@ -8,8 +8,52 @@ import { NavigationSheet } from './navigation-sheet';
 import LightDarkToggle from '../ui/light-dark-toggle';
 import LanguageToggle from '../ui/language-toggle';
 
+const SECTION_IDS = [
+  'home',
+  'about',
+  'services',
+  'experience',
+  'portfolio',
+  'contact',
+] as const;
+
+type SectionId = (typeof SECTION_IDS)[number];
+
+function useActiveSection(): SectionId {
+  const [active, setActive] = useState<SectionId>('home');
+  const visibleRef = useRef(new Set<SectionId>());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id as SectionId;
+          if (entry.isIntersecting) {
+            visibleRef.current.add(id);
+          } else {
+            visibleRef.current.delete(id);
+          }
+        });
+        const topmost = SECTION_IDS.find((id) => visibleRef.current.has(id));
+        if (topmost) setActive(topmost);
+      },
+      { rootMargin: '-10px 0px -85% 0px', threshold: 0 },
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return active;
+}
+
 const Navbar01Page = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +76,7 @@ const Navbar01Page = () => {
         <Logo className='w-20 h-14' />
 
         {/* Desktop Menu */}
-        <NavMenu className='hidden md:block' />
+        <NavMenu className='hidden md:block' activeSection={activeSection} />
 
         <div className='flex items-center gap-3'>
           <LightDarkToggle className='sm:inline-flex' />
@@ -40,7 +84,7 @@ const Navbar01Page = () => {
 
           {/* Mobile Menu */}
           <div className='md:hidden'>
-            <NavigationSheet />
+            <NavigationSheet activeSection={activeSection} />
           </div>
         </div>
       </div>

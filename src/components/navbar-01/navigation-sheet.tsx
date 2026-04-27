@@ -10,7 +10,11 @@ import { Menu } from 'lucide-react';
 import { Logo } from './logo';
 import { NavMenu } from './nav-menu';
 
-export const NavigationSheet = () => {
+type NavigationSheetProps = {
+  activeSection?: string;
+};
+
+export const NavigationSheet = ({ activeSection }: NavigationSheetProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -25,7 +29,11 @@ export const NavigationSheet = () => {
         <SheetDescription className='sr-only'>
           Site navigation links
         </SheetDescription>
-        <NavMenu orientation='vertical' className='mt-12 items-start' />
+        <NavMenu
+          orientation='vertical'
+          className='mt-12 items-start'
+          activeSection={activeSection}
+        />
       </SheetContent>
     </Sheet>
   );

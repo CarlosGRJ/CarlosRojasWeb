@@ -7,50 +7,46 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 import { useTranslation } from '@/context/TranslationProvider';
+import { cn } from '@/lib/utils';
 import { NavigationMenuProps } from '@radix-ui/react-navigation-menu';
 import Link from 'next/link';
 
-export const NavMenu = (props: NavigationMenuProps) => {
+type NavMenuProps = NavigationMenuProps & {
+  activeSection?: string;
+};
+
+const NAV_LINKS = [
+  { id: 'home', labelKey: 'Home' },
+  { id: 'about', labelKey: 'About' },
+  { id: 'services', labelKey: 'Services' },
+  { id: 'experience', labelKey: 'Experience' },
+  { id: 'portfolio', labelKey: 'Portfolio' },
+  { id: 'contact', labelKey: 'Contact' },
+] as const;
+
+export const NavMenu = ({ activeSection, ...props }: NavMenuProps) => {
   const { t } = useTranslation();
 
   return (
     <NavigationMenu {...props}>
       <NavigationMenuList className='gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start'>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#home'>{t.Header.Home}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#about'>{t.Header.About}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#services'>{t.Header.Services}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#experience'>{t.Header.Experience}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#portfolio'>{t.Header.Portfolio}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href='#contact'>{t.Header.Contact}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+        {NAV_LINKS.map(({ id, labelKey }) => (
+          <NavigationMenuItem key={id}>
+            <NavigationMenuLink asChild>
+              <Link
+                href={`#${id}`}
+                aria-current={activeSection === id ? 'page' : undefined}
+                className={cn(
+                  'text-sm font-medium transition-colors',
+                  activeSection === id
+                    ? 'text-primary'
+                    : 'text-foreground/70 hover:text-foreground',
+                )}>
+                {t.Header[labelKey]}
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
