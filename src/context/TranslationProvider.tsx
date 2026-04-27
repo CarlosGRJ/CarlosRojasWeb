@@ -29,6 +29,10 @@ export const TranslationProvider = ({
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'es' : 'en';
     setLocale(newLocale);
