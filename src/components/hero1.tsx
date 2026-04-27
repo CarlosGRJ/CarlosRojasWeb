@@ -1,6 +1,5 @@
 'use client';
 
-import { ArrowUpRight } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -68,9 +67,12 @@ const Hero1 = ({
         <div className='grid items-center gap-10 lg:grid-cols-[3fr_2fr]'>
           <div className='order-2 flex flex-col items-center rounded-3xl bg-background/60 p-6 text-center text-foreground shadow-md backdrop-blur-md sm:p-8 lg:order-1 lg:items-start lg:text-left'>
             {badge && (
-              <Badge variant='outline'>
+              <Badge className='gap-2 border-0 bg-green-50 py-1.5 text-green-700 dark:bg-green-950/40 dark:text-green-400'>
+                <span className='relative flex h-2 w-2' aria-hidden='true'>
+                  <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75' />
+                  <span className='relative inline-flex h-2 w-2 rounded-full bg-green-500' />
+                </span>
                 {badge}
-                <ArrowUpRight className='ml-2 size-4' />
               </Badge>
             )}
             <h1 className='my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl'>
