@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 };
 
 type LayoutProps = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: LayoutProps) {
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: LayoutProps) {
           disableTransitionOnChange>
           <TranslationProvider>
             <Navbar01Page />
-            <main className='px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
+            <main className='mx-auto w-full max-w-[1920px] px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
               {children}
               <Analytics />
               <SpeedInsights />
