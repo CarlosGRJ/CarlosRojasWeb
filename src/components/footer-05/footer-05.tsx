@@ -44,7 +44,7 @@ const Footer05Page = () => {
 
   return (
     <footer>
-      <div className='max-w-screen-xl mx-auto'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20'>
         <div className='py-12 flex flex-col justify-start items-center'>
           {/* Logo */}
           <Logo className='w-36 h-24' />

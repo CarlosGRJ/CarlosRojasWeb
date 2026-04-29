@@ -22,7 +22,8 @@ export default function PortfolioSection() {
   return (
     <section
       id='portfolio'
-      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
+      className='bg-muted/40'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center text-[1.4rem]'>
       <h2 className='text-4xl font-bold mb-6 border-b-4 border-primary pb-2'>
         {t.Header.Portfolio}
       </h2>
@@ -67,6 +68,7 @@ export default function PortfolioSection() {
           onClose={() => setSelectedProject(null)}
         />
       )}
+      </div>
     </section>
   );
 }

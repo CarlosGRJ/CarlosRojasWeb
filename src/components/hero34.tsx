@@ -11,7 +11,8 @@ const Hero34 = ({ description }: Hero34Props) => {
   const { t } = useTranslation();
 
   return (
-    <section id='about' className='text-center pt-16'>
+    <section id='about' className='bg-muted/40'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 text-center'>
       <h2 className='sec-title font-bold mb-6 md:mb-20 lg:mb-28 text-left sm:text-center'>
         {t.Header.About}
       </h2>
@@ -46,6 +47,7 @@ const Hero34 = ({ description }: Hero34Props) => {
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

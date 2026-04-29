@@ -11,7 +11,8 @@ export default function ServicesSection() {
   return (
     <section
       id='services'
-      className='flex flex-col items-center px-8 md:px-16 lg:px-24 text-base pt-16'>
+      className='bg-muted/40'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center text-base'>
       <h2 className='text-4xl font-bold border-b-4 border-primary mb-16 md:mb-20'>
         {t.Services.Title}
       </h2>
@@ -32,6 +33,7 @@ export default function ServicesSection() {
             </p>
           </Card>
         ))}
+      </div>
       </div>
     </section>
   );

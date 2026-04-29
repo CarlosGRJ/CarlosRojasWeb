@@ -8,10 +8,8 @@ export default function SkillsSection() {
   const { t } = useTranslation();
 
   return (
-    <section
-      id='skills'
-      aria-labelledby='skills-title'
-      className='flex flex-col items-center px-4 md:px-16 pt-16'>
+    <section id='skills' aria-labelledby='skills-title'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
       <h2 id='skills-title' className='sec-title mb-12 pb-2 md:mb-16'>
         {t.Skills.Title}
       </h2>
@@ -57,6 +55,7 @@ export default function SkillsSection() {
             </ul>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

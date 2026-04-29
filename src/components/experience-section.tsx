@@ -10,7 +10,8 @@ export default function ExperienceSection() {
   return (
     <section
       id='experience'
-      className='flex flex-col items-center justify-center text-[1.4rem] px-4 md:px-16 pt-16'>
+      className=''>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center text-[1.4rem]'>
       <h2 className='text-4xl font-bold mb-16 md:mb-20 border-b-4 border-primary pb-2'>
         {t.Experience.Title}
       </h2>
@@ -39,6 +40,7 @@ export default function ExperienceSection() {
             </CardDescription>
           </Card>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ const Hero1 = ({
         />
       </div>
 
-      <div className='mx-auto w-full max-w-7xl px-8 sm:px-20'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20'>
         <div className='grid items-center gap-10 lg:grid-cols-[3fr_2fr]'>
           <div className='order-2 flex flex-col items-center rounded-3xl bg-background/60 p-6 text-center text-foreground shadow-md backdrop-blur-md sm:p-8 lg:order-1 lg:items-start lg:text-left'>
             {badge && (

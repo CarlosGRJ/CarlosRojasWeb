@@ -100,7 +100,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable} antialiased px-8 sm:px-20`}>
+      <body className={`${poppins.variable} antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: LayoutProps) {
           disableTransitionOnChange>
           <TranslationProvider>
             <Navbar01Page />
-            <main className='mx-auto w-full max-w-[1920px] px-0 sm:px-8 md:px-4 flex flex-col gap-16 sm:gap-20 lg:gap-24'>
+            <main className='flex flex-col'>
               {children}
               <Analytics />
               <SpeedInsights />
