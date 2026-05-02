@@ -20,7 +20,7 @@ export default function ServicesSection() {
               <Card
                 key={service.id}
                 className='bg-background text-foreground border border-gray-300 dark:border-gray-700 rounded-xl p-6 shadow-none hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 text-center sm:text-left items-center sm:items-baseline'>
-                <div className='w-16 h-16 mb-4' aria-hidden='true'>
+                <div className='w-20 h-20 mb-4 [&_svg]:w-full [&_svg]:h-full' aria-hidden='true'>
                   {service.icon}
                 </div>
                 <h3 className='text-xl font-semibold mb-2'>
