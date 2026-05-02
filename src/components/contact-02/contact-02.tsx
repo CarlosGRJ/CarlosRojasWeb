@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { MailIcon, MessageSquareText, PhoneIcon } from 'lucide-react';
+import { Loader2, MailIcon, MessageSquareText, PhoneIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -50,6 +50,8 @@ const Contact02Page = () => {
   const { locale, t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
+
   const contactSchema = useMemo(
     () => createContactSchema(t.Contact.Form.Validation),
     [t],
@@ -95,6 +97,8 @@ const Contact02Page = () => {
       )
       .then(() => {
         form.reset();
+        setTurnstileToken(null);
+        setTurnstileKey((k) => k + 1);
         toast.success(t.Contact.Form.Toast.Success.Title, {
           description: t.Contact.Form.Toast.Success.Description,
           className: 'bg-green-500 text-white',
@@ -111,83 +115,86 @@ const Contact02Page = () => {
   };
 
   return (
-    <section id='contact' className=''>
+    <section id='contact'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-        <h2 className='sec-title mb-12 md:mb-16'>
-          {t.Contact.Title}
-        </h2>
+        <h2 className='sec-title mb-12 md:mb-16'>{t.Contact.Title}</h2>
 
-        <div className='text-center sm:text-start'>
-          <strong className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
-            {t.Contact.Headline}
-          </strong>
+        <div className='w-full max-w-5xl'>
+          <div className='text-center sm:text-start'>
+            <strong className='text-3xl md:text-4xl font-bold tracking-tight'>
+              {t.Contact.Headline}
+            </strong>
+            <p className='mt-3 text-base sm:text-lg text-muted-foreground'>
+              {t.Contact.Subheadline}
+            </p>
+          </div>
 
-          <p className='mt-3 text-base sm:text-lg'>{t.Contact.Subheadline}</p>
-
-          <div className='mt-24 grid lg:grid-cols-2 gap-16 md:gap-10'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 text-center sm:text-start'>
-              <div className='flex flex-col items-center sm:items-start'>
+          <div className='mt-10 grid lg:grid-cols-[1fr_2fr] gap-10 items-start'>
+            {/* Contact methods — compact sidebar */}
+            <ul className='space-y-6' aria-label={t.Contact.Title}>
+              <li className='flex items-start gap-3'>
                 <div
-                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  className='mt-0.5 h-8 w-8 shrink-0 flex items-center justify-center bg-primary/10 text-primary rounded-full'
                   aria-hidden='true'>
-                  <MailIcon />
+                  <MailIcon className='h-4 w-4' />
                 </div>
-                <h3 className='mt-6 font-semibold text-xl'>
-                  {t.Contact.Email.Title}
-                </h3>
-                <p className='my-2.5 text-muted-foreground'>
-                  {t.Contact.Email.Subtitle}
-                </p>
-                <Link
-                  aria-label={t.Aria.SendEmail}
-                  className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
-                  href='mailto:carlosgrjweb@gmail.com'>
-                  carlosgrjweb@gmail.com
-                </Link>
-              </div>
+                <div>
+                  <p className='font-semibold text-sm'>{t.Contact.Email.Title}</p>
+                  <p className='text-xs text-muted-foreground mb-1'>
+                    {t.Contact.Email.Subtitle}
+                  </p>
+                  <Link
+                    aria-label={t.Aria.SendEmail}
+                    className='text-sm font-medium hover:underline'
+                    href='mailto:carlosgrjweb@gmail.com'>
+                    carlosgrjweb@gmail.com
+                  </Link>
+                </div>
+              </li>
 
-              <div className='flex flex-col items-center sm:items-start'>
+              <li className='flex items-start gap-3'>
                 <div
-                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  className='mt-0.5 h-8 w-8 shrink-0 flex items-center justify-center bg-primary/10 text-primary rounded-full'
                   aria-hidden='true'>
-                  <PhoneIcon />
+                  <PhoneIcon className='h-4 w-4' />
                 </div>
-                <h3 className='mt-6 font-semibold text-xl'>
-                  {t.Contact.Phone.Title}
-                </h3>
-                <p className='my-2.5 text-muted-foreground'>
-                  {t.Contact.Phone.Subtitle}
-                </p>
-                <Link
-                  aria-label={t.Aria.CallCarlos}
-                  className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
-                  href='tel:+525585739469'>
-                  +52 55 8573 9469
-                </Link>
-              </div>
+                <div>
+                  <p className='font-semibold text-sm'>{t.Contact.Phone.Title}</p>
+                  <p className='text-xs text-muted-foreground mb-1'>
+                    {t.Contact.Phone.Subtitle}
+                  </p>
+                  <Link
+                    aria-label={t.Aria.CallCarlos}
+                    className='text-sm font-medium hover:underline'
+                    href='tel:+525585739469'>
+                    +52 55 8573 9469
+                  </Link>
+                </div>
+              </li>
 
-              <div className='flex flex-col items-center sm:items-start'>
+              <li className='flex items-start gap-3'>
                 <div
-                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  className='mt-0.5 h-8 w-8 shrink-0 flex items-center justify-center bg-primary/10 text-primary rounded-full'
                   aria-hidden='true'>
-                  <MessageSquareText />
+                  <MessageSquareText className='h-4 w-4' />
                 </div>
-                <h3 className='mt-6 font-semibold text-xl'>
-                  {t.Contact.WhatsApp.Title}
-                </h3>
-                <p className='my-2.5 text-muted-foreground'>
-                  {t.Contact.WhatsApp.Subtitle}
-                </p>
-                <Link
-                  aria-label={t.Aria.WhatsAppChat}
-                  href='https://wa.me/525585739469'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex gap-2 items-center justify-center w-36 mt-2 px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 text-white font-semibold transition'>
-                  <SiWhatsapp className='w-5 h-5' /> {t.Contact.WhatsApp.Button}
-                </Link>
-              </div>
-            </div>
+                <div>
+                  <p className='font-semibold text-sm'>{t.Contact.WhatsApp.Title}</p>
+                  <p className='text-xs text-muted-foreground mb-1'>
+                    {t.Contact.WhatsApp.Subtitle}
+                  </p>
+                  <Link
+                    aria-label={t.Aria.WhatsAppChat}
+                    href='https://wa.me/525585739469'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex gap-2 items-center mt-1 px-3 py-1.5 rounded-md bg-green-500 hover:bg-green-600 text-white text-sm font-semibold transition'>
+                    <SiWhatsapp className='h-4 w-4' />
+                    {t.Contact.WhatsApp.Button}
+                  </Link>
+                </div>
+              </li>
+            </ul>
 
             {/* Form */}
             <Card className='bg-accent shadow-none'>
@@ -195,6 +202,7 @@ const Contact02Page = () => {
                 <Form {...form}>
                   <form
                     onSubmit={form.handleSubmit(onSubmit)}
+                    aria-busy={loading}
                     noValidate>
                     <div className='grid md:grid-cols-2 gap-x-8 gap-y-5'>
                       <FormField
@@ -273,6 +281,7 @@ const Contact02Page = () => {
 
                       <div className='col-span-2'>
                         <Turnstile
+                          key={turnstileKey}
                           turnstileSiteKey={
                             process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
                           }
@@ -290,6 +299,9 @@ const Contact02Page = () => {
                       className='mt-6 w-full'
                       size='lg'
                       disabled={loading}>
+                      {loading && (
+                        <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />
+                      )}
                       {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
                     </Button>
                   </form>
