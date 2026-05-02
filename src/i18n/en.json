@@ -173,6 +173,9 @@
     "NoResults": "No projects found in this category.",
     "Internal": "Internal",
     "Role": "Role",
+    "Stack": "Stack",
+    "Overview": "Overview",
+    "Screenshots": "Screenshots",
     "VisitLiveSite": "Visit Live Site",
     "LiveSiteNotAvailable": "Live site not available.",
     "Close": "Close"

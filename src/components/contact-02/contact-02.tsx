@@ -130,7 +130,6 @@ const Contact02Page = () => {
           </div>
 
           <div className='mt-10 grid lg:grid-cols-[1fr_2fr] gap-10 items-start'>
-            {/* Contact methods — compact sidebar */}
             <ul className='space-y-6' aria-label={t.Contact.Title}>
               <li className='flex items-start gap-3'>
                 <div
@@ -196,7 +195,6 @@ const Contact02Page = () => {
               </li>
             </ul>
 
-            {/* Form */}
             <Card className='bg-accent shadow-none'>
               <CardContent className='p-6 md:p-10'>
                 <Form {...form}>
