@@ -1,46 +1,36 @@
 'use client';
 
-import React from 'react';
 import { useTranslation } from '@/context/TranslationProvider';
-import { Card, CardDescription, CardTitle } from './ui/card';
 
 export default function ExperienceSection() {
   const { t } = useTranslation();
 
   return (
-    <section
-      id='experience'
-      className=''>
+    <section id='experience'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center'>
-      <h2 className='sec-title mb-12 md:mb-16'>
-        {t.Experience.Title}
-      </h2>
+        <h2 className='sec-title mb-12 md:mb-16'>{t.Experience.Title}</h2>
 
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full'>
-        {t.Experience.List.map((exp) => (
-          <Card
-            key={exp.id}
-            className='bg-background border border-gray-300 dark:border-gray-700 p-8 transition-all hover:bg-primary'>
-            <div>
-              <time className='block text-sm font-medium opacity-75 mb-2'>
+        <ol className='relative w-full max-w-3xl border-l-2 border-border space-y-10'>
+          {t.Experience.List.map((exp) => (
+            <li key={exp.id} className='relative pl-8'>
+              <span className='absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-primary ring-4 ring-background' />
+
+              <time className='text-xs font-medium text-muted-foreground uppercase tracking-wide'>
                 {exp.date}
               </time>
-              <CardTitle>
-                <h3 className='text-2xl font-semibold mb-1'>{exp.role}</h3>
-              </CardTitle>
-              <p className='text-md text-muted-foreground'>{exp.company}</p>
-            </div>
+              <h3 className='mt-1 text-lg font-semibold text-foreground'>
+                {exp.role}
+              </h3>
+              <p className='text-sm text-muted-foreground mb-3'>{exp.company}</p>
 
-            <CardDescription className='text-foreground'>
-              <ul className='mt-6 list-disc list-inside space-y-2'>
+              <ul className='list-disc list-outside pl-4 space-y-1.5 text-sm text-muted-foreground'>
                 {exp.descriptions.map((desc) => (
                   <li key={desc.id}>{desc.desc}</li>
                 ))}
               </ul>
-            </CardDescription>
-          </Card>
-        ))}
-      </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
