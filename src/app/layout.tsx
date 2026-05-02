@@ -98,16 +98,39 @@ type LayoutProps = {
   readonly children: React.ReactNode;
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Carlos Rojas',
+  alternateName: 'Carlos Gerardo Rojas Jaime',
+  url: 'https://www.carlosrojasj.dev',
+  jobTitle: 'Full-Stack Developer',
+  sameAs: [
+    'https://www.linkedin.com/in/carlosgrj/',
+    'https://github.com/CarlosGRJ',
+    'https://www.instagram.com/carloscodebrew',
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang='en'>
       <body className={`${poppins.variable} antialiased`}>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
           <TranslationProvider>
+            <a
+              href='#home'
+              className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-foreground focus:ring-2 focus:ring-primary'>
+              Skip to main content
+            </a>
             <Navbar01Page />
             <main className='flex flex-col'>
               {children}

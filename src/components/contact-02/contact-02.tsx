@@ -121,9 +121,9 @@ const Contact02Page = () => {
 
         <div className='w-full max-w-5xl'>
           <div className='text-center sm:text-start'>
-            <strong className='text-3xl md:text-4xl font-bold tracking-tight'>
+            <p className='text-3xl md:text-4xl font-bold tracking-tight'>
               {t.Contact.Headline}
-            </strong>
+            </p>
             <p className='mt-3 text-base sm:text-lg text-muted-foreground'>
               {t.Contact.Subheadline}
             </p>

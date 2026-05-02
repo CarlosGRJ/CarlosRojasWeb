@@ -1,7 +1,7 @@
 'use client';
 
 import { getDictionary, type Dictionary, type Locale } from '@/i18n';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 type TranslationContextType = {
   locale: Locale;
@@ -22,10 +22,14 @@ export const TranslationProvider = ({
   const [t, setT] = useState<Dictionary>(getDictionary('en')); // ✅ now sync
 
   useEffect(() => {
-    const saved = localStorage.getItem('locale') as Locale | null;
-    if (saved) {
-      setLocale(saved);
-      setT(getDictionary(saved));
+    try {
+      const saved = localStorage.getItem('locale') as Locale | null;
+      if (saved) {
+        setLocale(saved);
+        setT(getDictionary(saved));
+      }
+    } catch {
+      // localStorage blocked (e.g. incognito with storage disabled)
     }
   }, []);
 
@@ -33,15 +37,24 @@ export const TranslationProvider = ({
     document.documentElement.lang = locale;
   }, [locale]);
 
-  const toggleLocale = () => {
+  const toggleLocale = useCallback(() => {
     const newLocale = locale === 'en' ? 'es' : 'en';
     setLocale(newLocale);
     setT(getDictionary(newLocale));
-    localStorage.setItem('locale', newLocale);
-  };
+    try {
+      localStorage.setItem('locale', newLocale);
+    } catch {
+      // localStorage blocked (e.g. incognito with storage disabled)
+    }
+  }, [locale]);
+
+  const value = useMemo(
+    () => ({ locale, t, toggleLocale }),
+    [locale, t, toggleLocale],
+  );
 
   return (
-    <TranslationContext.Provider value={{ locale, t, toggleLocale }}>
+    <TranslationContext.Provider value={value}>
       {children}
     </TranslationContext.Provider>
   );

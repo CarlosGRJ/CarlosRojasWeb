@@ -71,21 +71,24 @@ const Footer05Page = () => {
             <Link
               aria-label={t.Aria.VisitGitHub}
               href='https://github.com/CarlosGRJ'
-              target='_blank'>
+              target='_blank'
+              rel='noopener noreferrer'>
               <FaGithub className='h-5 w-5' />
             </Link>
 
             <Link
               aria-label={t.Aria.VisitInstagram}
               href='https://www.instagram.com/carloscodebrew'
-              target='_blank'>
+              target='_blank'
+              rel='noopener noreferrer'>
               <FaInstagram className='h-5 w-5' />
             </Link>
 
             <Link
               aria-label={t.Aria.VisitLinkedIn}
               href='https://www.linkedin.com/in/carlosgrj'
-              target='_blank'>
+              target='_blank'
+              rel='noopener noreferrer'>
               <FaLinkedinIn className='h-5 w-5' />
             </Link>
           </div>

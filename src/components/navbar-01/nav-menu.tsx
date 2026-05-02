@@ -42,7 +42,7 @@ export const NavMenu = ({
               <Link
                 href={`#${id}`}
                 onClick={onLinkClick}
-                aria-current={activeSection === id ? 'page' : undefined}
+                aria-current={activeSection === id ? 'location' : undefined}
                 className={cn(
                   'text-sm font-medium transition-colors',
                   activeSection === id
