@@ -168,6 +168,11 @@
   },
   "Portfolio": {
     "ViewProject": "Ver Proyecto",
+    "All": "Todos",
+    "FilterByCategory": "Filtrar por categoría",
+    "NoResults": "No hay proyectos en esta categoría.",
+    "Internal": "Interno",
+    "Role": "Rol",
     "VisitLiveSite": "Visitar Sitio Web",
     "LiveSiteNotAvailable": "Sitio web no disponible.",
     "Close": "Cerrar"

@@ -5,6 +5,16 @@ export type ProjectImage = {
   alt: string;
 };
 
+export type ProjectCategory =
+  | 'Web App'
+  | 'Landing Page'
+  | 'E-commerce'
+  | 'Catalog'
+  | 'FinTech'
+  | 'B2B'
+  | 'Dashboard'
+  | 'Portfolio';
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -15,5 +25,6 @@ export interface ProjectItem {
   role: string;
   techStack: string;
   url: string;
+  category: ProjectCategory;
   isInternal?: boolean;
 }

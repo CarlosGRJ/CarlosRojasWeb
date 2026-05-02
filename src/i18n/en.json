@@ -167,6 +167,11 @@
   },
   "Portfolio": {
     "ViewProject": "View Project",
+    "All": "All",
+    "FilterByCategory": "Filter by category",
+    "NoResults": "No projects found in this category.",
+    "Internal": "Internal",
+    "Role": "Role",
     "VisitLiveSite": "Visit Live Site",
     "LiveSiteNotAvailable": "Live site not available.",
     "Close": "Close"

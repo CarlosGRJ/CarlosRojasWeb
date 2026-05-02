@@ -114,6 +114,7 @@ export const projects: ProjectItem[] = [
     techStack:
       'Next.js 15, TypeScript, Tailwind CSS, ShadCN/UI, Supabase (PostgreSQL, Auth, Storage), Cloudflare, Vercel',
     url: 'https://www.tejiendohistoriaas.com.mx/',
+    category: 'Web App',
   },
   {
     id: 'landing-ecommerce',
@@ -178,6 +179,7 @@ export const projects: ProjectItem[] = [
     role: 'Full Stack Developer',
     techStack: 'Next.js, Shadcn, Tailwind, TypeScript, Vercel, Cloudflare',
     url: 'https://www.arigioaudioeiluminacion.com.mx/',
+    category: 'Catalog',
   },
   {
     id: 'carteras',
@@ -247,6 +249,7 @@ export const projects: ProjectItem[] = [
     role: 'Frontend Developer',
     techStack: 'Next.js, Shadcn, Tailwind, TypeScript, Vercel',
     url: 'https://www.erikavillap.com/',
+    category: 'Landing Page',
   },
   {
     id: 'THD',
@@ -313,6 +316,7 @@ export const projects: ProjectItem[] = [
     techStack:
       'React, GraphQL, Apollo, SCSS, Tailwind, Jest, React Testing Library',
     url: 'https://www.homedepot.com/',
+    category: 'E-commerce',
   },
   {
     id: 'bc-simulator',
@@ -382,6 +386,7 @@ export const projects: ProjectItem[] = [
     techStack:
       'React, TypeScript, SCSS, Tailwind, i18n, Jest, React Testing Library',
     url: '',
+    category: 'FinTech',
     isInternal: true,
   },
   {
@@ -437,6 +442,7 @@ export const projects: ProjectItem[] = [
       'React, TypeScript, SCSS, Tailwind, i18n, Jest, React Testing Library',
     isInternal: true,
     url: '',
+    category: 'FinTech',
   },
   {
     id: 'sabadell-simulator',
@@ -500,6 +506,7 @@ export const projects: ProjectItem[] = [
     techStack:
       'Angular, Tailwind, TypeScript, i18n, Jasmine, Karma, Custom Components',
     url: '',
+    category: 'FinTech',
   },
   {
     id: 'telcel-b2b',
@@ -660,6 +667,7 @@ export const projects: ProjectItem[] = [
     techStack:
       'Angular, RxJS, TypeScript, Jasmine, Karma, PrimeNG, Tailwind, SCSS',
     url: '',
+    category: 'B2B',
   },
   {
     id: 'old-portfolio',
@@ -713,5 +721,6 @@ export const projects: ProjectItem[] = [
     role: 'Desarrollador Frontend',
     techStack: 'React, SCSS, EmailJS, Netlify',
     url: 'https://carlosgrj.netlify.app/',
+    category: 'Portfolio',
   },
 ];
