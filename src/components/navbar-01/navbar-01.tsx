@@ -75,7 +75,7 @@ const Navbar01Page = () => {
       className={`z-50 h-16 w-full border-b border-foreground/10 bg-background/80 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
         isSticky ? 'sticky top-0 shadow-sm' : ''
       }`}>
-      <div className='mx-auto flex h-full max-w-screen-xl items-center justify-between px-8 sm:px-20'>
+      <div className='mx-auto flex h-full max-w-[1920px] items-center justify-between px-8 sm:px-20'>
         <Logo className='w-20 h-14' />
 
         <NavMenu className='hidden md:block' activeSection={activeSection} />

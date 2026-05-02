@@ -19,7 +19,7 @@ export const TranslationProvider = ({
   children: React.ReactNode;
 }) => {
   const [locale, setLocale] = useState<Locale>('en');
-  const [t, setT] = useState<Dictionary>(getDictionary('en')); // ✅ now sync
+  const [t, setT] = useState<Dictionary>(getDictionary('en'));
 
   useEffect(() => {
     try {
