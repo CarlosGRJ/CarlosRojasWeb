@@ -22,9 +22,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Carlos Rojas | Frontend Developer',
+  title: 'Carlos Rojas | Full-Stack Developer',
   description:
-    'Hi, I’m Carlos Rojas — a frontend developer from Mexico City specialized in React, Next.js, TypeScript, and UI/UX. Explore my portfolio, projects, and contact details.',
+    "Hi, I'm Carlos Rojas — a full-stack developer from Mexico City with 6+ years building web apps and AI-powered products using React, Next.js, Node.js, and TypeScript.",
   authors: [
     { name: 'Carlos Gerardo Rojas Jaime', url: 'https://www.carlosrojasj.dev' },
   ],
@@ -33,20 +33,21 @@ export const metadata: Metadata = {
   keywords: [
     'Carlos Rojas',
     'Carlos Gerardo Rojas Jaime',
+    'Full-Stack Developer',
     'Frontend Developer',
-    'Desarrollador Frontend Developer',
-    'FullStack Developer',
+    'Desarrollador Full Stack',
     'React Developer',
-    'Next.js Portfolio',
-    'Web Developer',
-    'Mexico Developer',
+    'Next.js Developer',
+    'Node.js Developer',
+    'TypeScript Developer',
+    'Web Developer Mexico',
     'Freelance Developer',
   ],
   metadataBase: new URL('https://www.carlosrojasj.dev'),
   openGraph: {
-    title: 'Carlos Rojas | Frontend Developer',
+    title: 'Carlos Rojas | Full-Stack Developer',
     description:
-      'Frontend developer based in Mexico City. Passionate about building clean, accessible, and scalable web applications.',
+      'Full-stack developer based in Mexico City. 6+ years building scalable web apps and AI-powered products with React, Next.js, Node.js, and TypeScript.',
     url: 'https://www.carlosrojasj.dev',
     siteName: 'Carlos Rojas Portfolio',
     locale: 'en_US',
@@ -62,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Carlos Rojas | Frontend Developer',
+    title: 'Carlos Rojas | Full-Stack Developer',
     description:
-      'Explore my projects built with React, Next.js, and modern frontend tools.',
+      'Explore my projects built with React, Next.js, Node.js, TypeScript, and AI tools.',
     images: ['https://www.carlosrojasj.dev/CoverPortfolio.webp'],
   },
   robots: {
