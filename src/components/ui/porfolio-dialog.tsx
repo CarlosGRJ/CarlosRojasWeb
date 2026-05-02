@@ -138,7 +138,7 @@ export default function PortfolioDialog({
 
             {!project.isInternal && project.url && (
               <Link
-                aria-label='Visit live site'
+                aria-label={t.Portfolio.VisitLiveSite}
                 href={project.url}
                 target='_blank'
                 rel='noopener noreferrer'

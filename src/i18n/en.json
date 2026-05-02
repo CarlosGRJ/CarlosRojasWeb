@@ -240,5 +240,20 @@
   },
   "Footer": {
     "Copyright": "Developed by Carlos Rojas. All rights reserved."
+  },
+  "Aria": {
+    "PrimaryNav": "Main navigation",
+    "OpenNavMenu": "Open navigation menu",
+    "SiteNavLinks": "Site navigation links",
+    "ToggleLanguage": "Toggle language",
+    "EnableDarkMode": "Enable dark mode",
+    "EnableLightMode": "Enable light mode",
+    "VisitLinkedIn": "Visit LinkedIn profile",
+    "VisitInstagram": "Visit Instagram profile",
+    "VisitGitHub": "Visit my GitHub profile",
+    "SendEmail": "Send an email to carlosgrjweb@gmail.com",
+    "CallCarlos": "Call Carlos at +52 55 8573 9469",
+    "WhatsAppChat": "Start a WhatsApp chat with Carlos",
+    "GoToSection": "Go to"
   }
 }

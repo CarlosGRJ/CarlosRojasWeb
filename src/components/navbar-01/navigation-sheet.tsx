@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -9,16 +11,19 @@ import {
 import { Menu } from 'lucide-react';
 import { Logo } from './logo';
 import { NavMenu } from './nav-menu';
+import { useTranslation } from '@/context/TranslationProvider';
 
 type NavigationSheetProps = {
   activeSection?: string;
 };
 
 export const NavigationSheet = ({ activeSection }: NavigationSheetProps) => {
+  const { t } = useTranslation();
+
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant='outline' size='icon' aria-label='Open navigation menu'>
+        <Button variant='outline' size='icon' aria-label={t.Aria.OpenNavMenu}>
           <Menu aria-hidden='true' />
         </Button>
       </SheetTrigger>
@@ -27,7 +32,7 @@ export const NavigationSheet = ({ activeSection }: NavigationSheetProps) => {
           <Logo className='w-20 h-14' />
         </SheetTitle>
         <SheetDescription className='sr-only'>
-          Site navigation links
+          {t.Aria.SiteNavLinks}
         </SheetDescription>
         <NavMenu
           orientation='vertical'

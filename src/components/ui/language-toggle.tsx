@@ -20,7 +20,7 @@ export default function LanguageToggle({ className }: { className?: string }) {
         <TooltipTrigger asChild className={className}>
           <Button
             onClick={toggleLocale}
-            aria-label='Toggle language'
+            aria-label={t.Aria.ToggleLanguage}
             variant='outline'>
             {locale === LanguageEnum.EN ? LanguageEnum.ES : LanguageEnum.EN}
           </Button>

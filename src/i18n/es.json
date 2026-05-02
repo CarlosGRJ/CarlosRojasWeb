@@ -241,5 +241,20 @@
   },
   "Footer": {
     "Copyright": "Desarrollado por Carlos Rojas. Todos los derechos reservados."
+  },
+  "Aria": {
+    "PrimaryNav": "Navegación principal",
+    "OpenNavMenu": "Abrir menú de navegación",
+    "SiteNavLinks": "Enlaces de navegación del sitio",
+    "ToggleLanguage": "Cambiar idioma",
+    "EnableDarkMode": "Activar modo oscuro",
+    "EnableLightMode": "Activar modo claro",
+    "VisitLinkedIn": "Visitar perfil de LinkedIn",
+    "VisitInstagram": "Visitar perfil de Instagram",
+    "VisitGitHub": "Visitar mi perfil de GitHub",
+    "SendEmail": "Enviar un correo a carlosgrjweb@gmail.com",
+    "CallCarlos": "Llamar a Carlos al +52 55 8573 9469",
+    "WhatsAppChat": "Iniciar chat de WhatsApp con Carlos",
+    "GoToSection": "Ir a"
   }
 }

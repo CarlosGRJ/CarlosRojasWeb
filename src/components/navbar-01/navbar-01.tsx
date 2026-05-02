@@ -7,6 +7,7 @@ import { NavMenu } from './nav-menu';
 import { NavigationSheet } from './navigation-sheet';
 import LightDarkToggle from '../ui/light-dark-toggle';
 import LanguageToggle from '../ui/language-toggle';
+import { useTranslation } from '@/context/TranslationProvider';
 
 const SECTION_IDS = [
   'home',
@@ -55,6 +56,7 @@ function useActiveSection(): SectionId {
 const Navbar01Page = () => {
   const [isSticky, setIsSticky] = useState(false);
   const activeSection = useActiveSection();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +71,7 @@ const Navbar01Page = () => {
 
   return (
     <nav
-      aria-label='Primary'
+      aria-label={t.Aria.PrimaryNav}
       className={`z-50 h-16 w-screen -mx-[calc(50vw-50%)] border-b border-foreground/10 bg-background/80 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
         isSticky ? 'sticky top-0 shadow-sm' : ''
       }`}>

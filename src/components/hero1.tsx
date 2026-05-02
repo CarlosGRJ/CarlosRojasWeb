@@ -113,7 +113,7 @@ const Hero1 = ({
                     href='https://www.linkedin.com/in/carlosgrj/'
                     target='_blank'
                     rel='noopener noreferrer'
-                    aria-label='Visit LinkedIn profile'
+                    aria-label={t.Aria.VisitLinkedIn}
                     className='inline-flex h-10 w-10 items-center justify-center rounded-full border bg-background text-foreground transition hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'>
                     <FaLinkedin className='size-5' />
                   </Link>
@@ -121,7 +121,7 @@ const Hero1 = ({
                     href='https://www.instagram.com/carloscodebrew'
                     target='_blank'
                     rel='noopener noreferrer'
-                    aria-label='Visit Instagram profile'
+                    aria-label={t.Aria.VisitInstagram}
                     className='inline-flex h-10 w-10 items-center justify-center rounded-full border bg-background text-foreground transition hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'>
                     <FaInstagram className='size-5' />
                   </Link>
