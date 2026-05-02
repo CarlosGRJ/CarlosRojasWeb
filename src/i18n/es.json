@@ -203,10 +203,15 @@
           "Title": "Faltan campos",
           "Description": "Por favor, completa todos los campos."
         },
+        "FirstNameRequired": "El nombre es obligatorio",
+        "LastNameRequired": "El apellido es obligatorio",
+        "EmailRequired": "El correo electrónico es obligatorio",
+        "MessageMinLength": "El mensaje debe tener al menos 10 caracteres",
         "InvalidEmail": {
           "Title": "Correo no válido",
           "Description": "Por favor, ingresa un correo electrónico válido."
         },
+        "InvalidEmailMessage": "Por favor, ingresa un correo electrónico válido",
         "CaptchaRequired": {
           "Title": "Captcha requerido",
           "Description": "Por favor, completa el captcha antes de enviar."

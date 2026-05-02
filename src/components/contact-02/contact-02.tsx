@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { MailIcon, MessageSquareText, PhoneIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -25,24 +25,35 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 
-const contactSchema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  lastName: z.string().min(1, 'Last name is required'),
-  email: z
-    .string()
-    .min(1, 'Email is required')
-    .refine((val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), {
-      message: 'Invalid email address',
-    }),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
+const createContactSchema = (messages: {
+  FirstNameRequired: string;
+  LastNameRequired: string;
+  EmailRequired: string;
+  InvalidEmailMessage: string;
+  MessageMinLength: string;
+}) =>
+  z.object({
+    firstName: z.string().min(1, messages.FirstNameRequired),
+    lastName: z.string().min(1, messages.LastNameRequired),
+    email: z
+      .string()
+      .min(1, messages.EmailRequired)
+      .refine((val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), {
+        message: messages.InvalidEmailMessage,
+      }),
+    message: z.string().min(10, messages.MessageMinLength),
+  });
 
-type ContactFormValues = z.infer<typeof contactSchema>;
+type ContactFormValues = z.infer<ReturnType<typeof createContactSchema>>;
 
 const Contact02Page = () => {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const contactSchema = useMemo(
+    () => createContactSchema(t.Contact.Form.Validation),
+    [t],
+  );
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -53,6 +64,12 @@ const Contact02Page = () => {
       message: '',
     },
   });
+
+  useEffect(() => {
+    if (Object.keys(form.formState.errors).length > 0) {
+      void form.trigger();
+    }
+  }, [form, locale]);
 
   const onSubmit = async (data: ContactFormValues) => {
     if (!turnstileToken) {

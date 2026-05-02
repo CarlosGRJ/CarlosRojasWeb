@@ -202,10 +202,15 @@
           "Title": "Missing fields",
           "Description": "Please complete all fields."
         },
+        "FirstNameRequired": "First name is required",
+        "LastNameRequired": "Last name is required",
+        "EmailRequired": "Email is required",
+        "MessageMinLength": "Message must be at least 10 characters",
         "InvalidEmail": {
           "Title": "Invalid email",
           "Description": "Please enter a valid email address."
         },
+        "InvalidEmailMessage": "Please enter a valid email address",
         "CaptchaRequired": {
           "Title": "Captcha required",
           "Description": "Please complete the captcha before submitting."
