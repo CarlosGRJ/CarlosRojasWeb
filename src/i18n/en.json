@@ -100,27 +100,27 @@
         "date": "Jul 2025 - Present",
         "role": "Senior Full Stack Developer",
         "company": "Tavant (contractor for Realtor.com)",
-        "metric": "Performance automation · CI/CD optimization · ↑ test coverage",
+        "metric": "300M pageviews/month platform",
         "descriptions": [
           {
             "id": "TAVANT1",
-            "desc": "Built Node.js utilities to automate performance testing workflows using Sitespeed.io and Docker."
+            "desc": "Built Doberman v2, a production performance monitoring system integrating SpeedCurve (Synthetic + RUM) across all microfrontends — used New Relic traffic analysis and Amplitude feature flags to stay within a 25K synthetic check/month contract limit on a 300M pageview/month platform."
           },
           {
             "id": "TAVANT2",
-            "desc": "Optimized CI/CD pipelines in CircleCI, improving build reliability through refined YAML and Docker setups."
+            "desc": "Created Doberman v1: a CI workflow (Sitespeed.io + CircleCI) that ran performance tests on every PR, blocked merges on budget breaches, and posted automated PR comments with per-route pass/fail tables."
           },
           {
             "id": "TAVANT3",
-            "desc": "Increased test coverage with Jest and React Testing Library, strengthening quality gates in SonarQube."
+            "desc": "Built and maintained Next.js microfrontend apps for Realtor.com — reusable components, pages, and unit tests in TypeScript, Jest, and React Testing Library, with quality gates in SonarQube. Contributed to sprint planning, spikes, and epic organization within a Scrum team."
           },
           {
             "id": "TAVANT4",
-            "desc": "Documented and standardized technical workflows to enhance cross-team collaboration."
+            "desc": "Migrated legacy SSH scripts to Node.js/TypeScript, optimized CircleCI pipelines to reduce resource usage and costs, and contributed to Vite and Storybook migrations."
           },
           {
             "id": "TAVANT5",
-            "desc": "Contributing to Vite and Storybook migrations and preparing for React and Next.js frontend initiatives."
+            "desc": "Used AI tools (Claude, Gemini) with structured context files to accelerate development, always reviewing output before shipping."
           }
         ]
       },

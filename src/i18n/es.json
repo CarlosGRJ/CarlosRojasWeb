@@ -100,27 +100,27 @@
         "date": "Jul 2025 - Presente",
         "role": "Desarrollador Full Stack Senior",
         "company": "Tavant (contratista para Realtor.com)",
-        "metric": "Automatización de rendimiento · CI/CD · ↑ cobertura de pruebas",
+        "metric": "Plataforma de 300M visitas/mes",
         "descriptions": [
           {
             "id": "TAVANT1",
-            "desc": "Desarrollé utilidades en Node.js para automatizar pruebas de rendimiento con Sitespeed.io y Docker."
+            "desc": "Construí Doberman v2, un sistema de monitoreo de rendimiento en producción integrando SpeedCurve (Synthetic + RUM) en todos los microfrontends — usé análisis de tráfico con New Relic y feature flags con Amplitude para operar dentro de un límite contractual de 25K pruebas sintéticas/mes en una plataforma de 300M visitas/mes."
           },
           {
             "id": "TAVANT2",
-            "desc": "Optimicé pipelines de CI/CD en CircleCI y mejoré la confiabilidad de builds mediante YAML y Docker."
+            "desc": "Creé Doberman v1: un flujo de CI (Sitespeed.io + CircleCI) que ejecutaba pruebas de rendimiento en cada PR, bloqueaba merges si se superaban los presupuestos y publicaba comentarios automáticos con tablas de resultados por ruta."
           },
           {
             "id": "TAVANT3",
-            "desc": "Aumenté la cobertura de pruebas con Jest y React Testing Library, reforzando la calidad en SonarQube."
+            "desc": "Desarrollé y mantuve aplicaciones Next.js en arquitectura de microfrontends para Realtor.com — componentes reutilizables, páginas y pruebas unitarias en TypeScript, Jest y React Testing Library, con quality gates en SonarQube. Contribuí en la planeación de sprints, spikes y organización de épicas en un equipo Scrum."
           },
           {
             "id": "TAVANT4",
-            "desc": "Documenté y estandaricé flujos de trabajo técnicos para mejorar la colaboración entre equipos."
+            "desc": "Migré scripts legacy basados en SSH a Node.js/TypeScript, optimicé pipelines de CircleCI para reducir el uso de recursos y costos, y contribuí a las migraciones de Vite y Storybook."
           },
           {
             "id": "TAVANT5",
-            "desc": "Participando en la migración a Vite y Storybook y preparando contribuciones en React y Next.js."
+            "desc": "Usé herramientas de IA (Claude, Gemini) con archivos de contexto estructurados para acelerar el desarrollo, revisando siempre el output antes de enviarlo a producción."
           }
         ]
       },
