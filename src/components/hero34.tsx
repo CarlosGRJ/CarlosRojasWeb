@@ -13,7 +13,7 @@ const Hero34 = ({ description }: Hero34Props) => {
   return (
     <section id='about' className='bg-muted/40'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 text-center'>
-      <h2 className='sec-title font-bold mb-6 md:mb-20 lg:mb-28 text-left sm:text-center'>
+      <h2 className='sec-title mb-12 md:mb-16 text-left sm:text-center'>
         {t.Header.About}
       </h2>
 

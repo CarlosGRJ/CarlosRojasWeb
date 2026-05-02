@@ -23,8 +23,8 @@ export default function PortfolioSection() {
     <section
       id='portfolio'
       className='bg-muted/40'>
-      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center text-[1.4rem]'>
-      <h2 className='text-4xl font-bold mb-6 border-b-4 border-primary pb-2'>
+      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center'>
+      <h2 className='sec-title mb-12 md:mb-16'>
         {t.Header.Portfolio}
       </h2>
 
@@ -49,7 +49,7 @@ export default function PortfolioSection() {
               <h3 className='text-2xl font-semibold text-foreground'>
                 {project.title}
               </h3>
-              <p className='text-[1.4rem] leading-relaxed text-muted-foreground'>
+              <p className='text-base leading-relaxed text-muted-foreground'>
                 {project.summary}
               </p>
               <Button

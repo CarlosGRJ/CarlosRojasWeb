@@ -156,7 +156,7 @@
 
 @layer components {
   .sec-title {
-    @apply inline-block text-4xl sm:text-5xl font-bold border-b-4 border-primary leading-snug;
+    @apply inline-block text-4xl sm:text-5xl font-bold border-b-4 border-primary leading-snug pb-2;
   }
 }
 

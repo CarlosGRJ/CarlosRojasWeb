@@ -10,7 +10,7 @@ export default function SkillsSection() {
   return (
     <section id='skills' aria-labelledby='skills-title'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-      <h2 id='skills-title' className='sec-title mb-12 pb-2 md:mb-16'>
+      <h2 id='skills-title' className='sec-title mb-12 md:mb-16'>
         {t.Skills.Title}
       </h2>
 

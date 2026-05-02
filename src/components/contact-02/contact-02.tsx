@@ -113,7 +113,7 @@ const Contact02Page = () => {
   return (
     <section id='contact' className=''>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-        <h2 className='text-4xl font-bold mb-16 md:mb-20 border-b-4 border-primary pb-2'>
+        <h2 className='sec-title mb-12 md:mb-16'>
           {t.Contact.Title}
         </h2>
 
