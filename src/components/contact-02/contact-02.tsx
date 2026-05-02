@@ -206,7 +206,7 @@ const Contact02Page = () => {
                             <FormControl>
                               <Input
                                 placeholder={t.Contact.Form.FirstName}
-                                className='bg-white h-11 shadow-none'
+                                className='bg-background h-11 shadow-none'
                                 {...field}
                               />
                             </FormControl>
@@ -224,7 +224,7 @@ const Contact02Page = () => {
                             <FormControl>
                               <Input
                                 placeholder={t.Contact.Form.LastName}
-                                className='bg-white h-11 shadow-none'
+                                className='bg-background h-11 shadow-none'
                                 {...field}
                               />
                             </FormControl>
@@ -243,7 +243,7 @@ const Contact02Page = () => {
                               <Input
                                 type='email'
                                 placeholder={t.Contact.Form.Email}
-                                className='bg-white h-11 shadow-none'
+                                className='bg-background h-11 shadow-none'
                                 {...field}
                               />
                             </FormControl>
@@ -261,7 +261,7 @@ const Contact02Page = () => {
                             <FormControl>
                               <Textarea
                                 placeholder={t.Contact.Form.Message}
-                                className='bg-white shadow-none'
+                                className='bg-background shadow-none'
                                 rows={6}
                                 {...field}
                               />
@@ -277,7 +277,7 @@ const Contact02Page = () => {
                             process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
                           }
                           callback={(token) => setTurnstileToken(token)}
-                          theme='light'
+                          theme='auto'
                           size='normal'
                           retry='auto'
                           refreshExpired='auto'
