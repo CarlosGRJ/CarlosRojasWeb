@@ -72,7 +72,7 @@ const Navbar01Page = () => {
   return (
     <nav
       aria-label={t.Aria.PrimaryNav}
-      className={`z-50 h-16 w-screen -mx-[calc(50vw-50%)] border-b border-foreground/10 bg-background/80 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
+      className={`z-50 h-16 w-full border-b border-foreground/10 bg-background/80 transition-all duration-300 backdrop-blur-md backdrop-saturate-150 ${
         isSticky ? 'sticky top-0 shadow-sm' : ''
       }`}>
       <div className='mx-auto flex h-full max-w-screen-xl items-center justify-between px-8 sm:px-20'>
