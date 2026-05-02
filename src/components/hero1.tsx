@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -68,8 +67,7 @@ const Hero1 = ({
           <div className='order-2 flex flex-col items-center rounded-3xl bg-background/60 p-6 text-center text-foreground shadow-md backdrop-blur-md sm:p-8 lg:order-1 lg:items-start lg:text-left'>
             {badge && (
               <Badge
-                className='hero-animate gap-2 border-0 bg-green-50 py-1.5 text-green-700 dark:bg-green-950/40 dark:text-green-400'
-                style={{ animationDelay: '0s' }}>
+                className='hero-animate [animation-delay:0s] gap-2 border-0 bg-green-50 py-1.5 text-green-700 dark:bg-green-950/40 dark:text-green-400'>
                 <span className='relative flex h-2 w-2' aria-hidden='true'>
                   <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75' />
                   <span className='relative inline-flex h-2 w-2 rounded-full bg-green-500' />
@@ -78,18 +76,15 @@ const Hero1 = ({
               </Badge>
             )}
             <h1
-              className='hero-animate my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl'
-              style={{ animationDelay: '0.1s' }}>
+              className='hero-animate [animation-delay:0.1s] my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl'>
               {heading}
             </h1>
             <p
-              className='hero-animate mb-8 max-w-xl text-foreground/70 lg:text-xl'
-              style={{ animationDelay: '0.2s' }}>
+              className='hero-animate [animation-delay:0.2s] mb-8 max-w-xl text-foreground/70 lg:text-xl'>
               {description}
             </p>
             <div
-              className='hero-animate flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start'
-              style={{ animationDelay: '0.3s' }}>
+              className='hero-animate [animation-delay:0.3s] flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start'>
               {buttons.primary && (
                 <Button asChild className='w-full sm:w-auto'>
                   <Link href={buttons.primary.url}>
@@ -110,8 +105,7 @@ const Hero1 = ({
               )}
             </div>
             <dl
-              className='hero-animate mt-8 grid w-full max-w-md grid-cols-2 gap-4 text-left text-sm'
-              style={{ animationDelay: '0.4s' }}>
+              className='hero-animate [animation-delay:0.4s] mt-8 grid w-full max-w-md grid-cols-2 gap-4 text-left text-sm'>
               <div className='rounded-xl border bg-background/90 p-4 shadow-sm'>
                 <dt className='text-foreground/60'>{t.Home.YearsExperience}</dt>
                 <dd className='mt-2 text-2xl font-semibold'>6+</dd>
@@ -141,8 +135,7 @@ const Hero1 = ({
           </div>
 
           <figure
-            className='hero-animate order-1 relative mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:order-2 lg:justify-self-end'
-            style={{ animationDelay: '0.2s' }}>
+            className='hero-animate [animation-delay:0.2s] order-1 relative mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:order-2 lg:justify-self-end'>
             <div className='absolute -right-6 -top-6 hidden h-20 w-20 rounded-full bg-primary/20 blur-2xl sm:block' />
             <div className='absolute -bottom-8 -left-8 hidden h-24 w-24 rounded-full bg-primary/20 blur-2xl sm:block' />
             <Image

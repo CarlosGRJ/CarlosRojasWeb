@@ -78,14 +78,12 @@ const Navbar01Page = () => {
       <div className='mx-auto flex h-full max-w-screen-xl items-center justify-between px-8 sm:px-20'>
         <Logo className='w-20 h-14' />
 
-        {/* Desktop Menu */}
         <NavMenu className='hidden md:block' activeSection={activeSection} />
 
         <div className='flex items-center gap-3'>
           <LightDarkToggle className='sm:inline-flex' />
           <LanguageToggle />
 
-          {/* Mobile Menu */}
           <div className='md:hidden'>
             <NavigationSheet activeSection={activeSection} />
           </div>

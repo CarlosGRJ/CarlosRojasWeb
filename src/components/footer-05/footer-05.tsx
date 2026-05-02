@@ -46,7 +46,6 @@ const Footer05Page = () => {
     <footer>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20'>
         <div className='py-12 flex flex-col justify-start items-center'>
-          {/* Logo */}
           <Logo className='w-36 h-24' />
 
           <ul className='mt-6 flex items-center gap-4 flex-wrap'>
@@ -64,7 +63,6 @@ const Footer05Page = () => {
         </div>
         <Separator />
         <div className='py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0'>
-          {/* Copyright */}
           <span className='text-muted-foreground'>
             &copy; {new Date().getFullYear()} {t.Footer.Copyright}
           </span>
