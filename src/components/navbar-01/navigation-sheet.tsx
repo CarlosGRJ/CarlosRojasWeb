@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -19,9 +21,10 @@ type NavigationSheetProps = {
 
 export const NavigationSheet = ({ activeSection }: NavigationSheetProps) => {
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant='outline' size='icon' aria-label={t.Aria.OpenNavMenu}>
           <Menu aria-hidden='true' />
@@ -38,6 +41,7 @@ export const NavigationSheet = ({ activeSection }: NavigationSheetProps) => {
           orientation='vertical'
           className='mt-12 items-start'
           activeSection={activeSection}
+          onLinkClick={() => setOpen(false)}
         />
       </SheetContent>
     </Sheet>

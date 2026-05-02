@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 type NavMenuProps = NavigationMenuProps & {
   activeSection?: string;
+  onLinkClick?: () => void;
 };
 
 const NAV_LINKS = [
@@ -25,7 +26,11 @@ const NAV_LINKS = [
   { id: 'contact', labelKey: 'Contact' },
 ] as const;
 
-export const NavMenu = ({ activeSection, ...props }: NavMenuProps) => {
+export const NavMenu = ({
+  activeSection,
+  onLinkClick,
+  ...props
+}: NavMenuProps) => {
   const { t } = useTranslation();
 
   return (
@@ -36,6 +41,7 @@ export const NavMenu = ({ activeSection, ...props }: NavMenuProps) => {
             <NavigationMenuLink asChild>
               <Link
                 href={`#${id}`}
+                onClick={onLinkClick}
                 aria-current={activeSection === id ? 'page' : undefined}
                 className={cn(
                   'text-sm font-medium transition-colors',
