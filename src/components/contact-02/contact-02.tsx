@@ -1,78 +1,79 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { MailIcon, MessageSquareText, PhoneIcon } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import emailjs from '@emailjs/browser';
+import Turnstile from 'react-cloudflare-turnstile';
+import { SiWhatsapp } from 'react-icons/si';
+import { toast } from 'sonner';
 
 import { useTranslation } from '@/context/TranslationProvider';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 
-import { toast } from 'sonner';
-import emailjs from '@emailjs/browser';
-import Turnstile from 'react-cloudflare-turnstile';
-import { SiWhatsapp } from 'react-icons/si';
+const contactSchema = z.object({
+  firstName: z.string().min(1, 'First name is required'),
+  lastName: z.string().min(1, 'Last name is required'),
+  email: z
+    .string()
+    .min(1, 'Email is required')
+    .refine((val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), {
+      message: 'Invalid email address',
+    }),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+});
+
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 const Contact02Page = () => {
   const { t } = useTranslation();
-
-  const formRef = useRef<HTMLFormElement>(null);
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
-  const validateEmail = (email: string) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
+    },
+  });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError('');
-    setSent(false);
-    setLoading(true);
-
-    const form = formRef.current;
-    if (!form) return;
-
-    const firstName = (form.firstName as HTMLInputElement).value.trim();
-    const lastName = (form.lastName as HTMLInputElement).value.trim();
-    const email = (form.email as HTMLInputElement).value.trim();
-    const message = (form.message as HTMLTextAreaElement).value.trim();
-
-    if (!firstName || !lastName || !email || !message) {
-      setLoading(false);
-      toast.warning(t.Contact.Form.Validation.MissingFields.Title, {
-        description: t.Contact.Form.Validation.MissingFields.Description,
-      });
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      setLoading(false);
-      toast.warning(t.Contact.Form.Validation.InvalidEmail.Title, {
-        description: t.Contact.Form.Validation.InvalidEmail.Description,
-      });
-      return;
-    }
-
+  const onSubmit = async (data: ContactFormValues) => {
     if (!turnstileToken) {
-      setLoading(false);
       toast.warning(t.Contact.Form.Validation.CaptchaRequired.Title, {
         description: t.Contact.Form.Validation.CaptchaRequired.Description,
       });
       return;
     }
 
+    setLoading(true);
+
     emailjs
-      .sendForm(
+      .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        form,
+        {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          message: data.message,
+        },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
       )
       .then(() => {
@@ -93,166 +94,193 @@ const Contact02Page = () => {
   };
 
   return (
-    <section
-      id='contact'
-      className=''>
+    <section id='contact' className=''>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-      <h2 className='text-4xl font-bold  mb-16 md:mb-20 border-b-4 border-primary pb-2'>
-        {t.Contact.Title}
-      </h2>
+        <h2 className='text-4xl font-bold mb-16 md:mb-20 border-b-4 border-primary pb-2'>
+          {t.Contact.Title}
+        </h2>
 
-      <div className='text-center sm:text-start'>
-        <strong className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
-          {t.Contact.Headline}
-        </strong>
+        <div className='text-center sm:text-start'>
+          <strong className='mt-3 text-3xl md:text-4xl font-bold tracking-tight'>
+            {t.Contact.Headline}
+          </strong>
 
-        <p className='mt-3 text-base sm:text-lg'>{t.Contact.Subheadline}</p>
+          <p className='mt-3 text-base sm:text-lg'>{t.Contact.Subheadline}</p>
 
-        <div className='mt-24 grid lg:grid-cols-2 gap-16 md:gap-10'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 text-center sm:text-start'>
-            <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
-                <MailIcon />
-              </div>
-              <h3 className='mt-6 font-semibold text-xl'>
-                {t.Contact.Email.Title}
-              </h3>
-              <p className='my-2.5 text-muted-foreground'>
-                {t.Contact.Email.Subtitle}
-              </p>
-              <Link
-                aria-label='Send an email to carlosgrjweb@gmail.com'
-                className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
-                href='mailto:carlosgrjweb@gmail.com'>
-                carlosgrjweb@gmail.com
-              </Link>
-            </div>
-
-            <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
-                <PhoneIcon />
-              </div>
-              <h3 className='mt-6 font-semibold text-xl'>
-                {t.Contact.Phone.Title}
-              </h3>
-              <p className='my-2.5 text-muted-foreground'>
-                {t.Contact.Phone.Subtitle}
-              </p>
-              <Link
-                aria-label='Call Carlos at +52 55 8573 9469'
-                className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
-                href='tel:+525585739469'>
-                +52 55 8573 9469
-              </Link>
-            </div>
-
-            <div className='flex flex-col items-center sm:items-start'>
-              <div className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full' aria-hidden='true'>
-                <MessageSquareText />
-              </div>
-              <h3 className='mt-6 font-semibold text-xl'>
-                {t.Contact.WhatsApp.Title}
-              </h3>
-              <p className='my-2.5 text-muted-foreground'>
-                {t.Contact.WhatsApp.Subtitle}
-              </p>
-              <Link
-                aria-label='Start a WhatsApp chat with Carlos'
-                href='https://wa.me/525585739469'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='flex gap-2 items-center justify-center w-36 mt-2 px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 text-white font-semibold transition'>
-                <SiWhatsapp className='w-5 h-5' /> {t.Contact.WhatsApp.Button}
-              </Link>
-            </div>
-          </div>
-
-          {/* Form */}
-          <Card className='bg-accent shadow-none'>
-            <CardContent className='p-6 md:p-10'>
-              <form ref={formRef} onSubmit={handleSubmit}>
-                <div className='grid md:grid-cols-2 gap-x-8 gap-y-5'>
-                  <div className='col-span-2 sm:col-span-1'>
-                    <Label htmlFor='firstName'>
-                      {t.Contact.Form.FirstName}
-                    </Label>
-                    <Input
-                      placeholder={t.Contact.Form.FirstName}
-                      id='firstName'
-                      name='firstName'
-                      className='mt-1.5 bg-white h-11 shadow-none'
-                      required
-                    />
-                  </div>
-
-                  <div className='col-span-2 sm:col-span-1'>
-                    <Label htmlFor='lastName'>{t.Contact.Form.LastName}</Label>
-                    <Input
-                      placeholder={t.Contact.Form.LastName}
-                      id='lastName'
-                      name='lastName'
-                      className='mt-1.5 bg-white h-11 shadow-none'
-                      required
-                    />
-                  </div>
-                  <div className='col-span-2'>
-                    <Label htmlFor='email'>{t.Contact.Form.Email}</Label>
-                    <Input
-                      type='email'
-                      placeholder={t.Contact.Form.Email}
-                      id='email'
-                      name='email'
-                      className='mt-1.5 bg-white h-11 shadow-none'
-                      required
-                    />
-                  </div>
-                  <div className='col-span-2'>
-                    <Label htmlFor='message'>{t.Contact.Form.Message}</Label>
-                    <Textarea
-                      id='message'
-                      name='message'
-                      placeholder={t.Contact.Form.Message}
-                      className='mt-1.5 bg-white shadow-none'
-                      rows={6}
-                      required
-                    />
-                  </div>
-
-                  <div className='col-span-2'>
-                    <Turnstile
-                      turnstileSiteKey={
-                        process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
-                      }
-                      callback={(token) => setTurnstileToken(token)}
-                      theme='light'
-                      size='normal'
-                      retry='auto'
-                      refreshExpired='auto'
-                    />
-                  </div>
+          <div className='mt-24 grid lg:grid-cols-2 gap-16 md:gap-10'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 text-center sm:text-start'>
+              <div className='flex flex-col items-center sm:items-start'>
+                <div
+                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  aria-hidden='true'>
+                  <MailIcon />
                 </div>
+                <h3 className='mt-6 font-semibold text-xl'>
+                  {t.Contact.Email.Title}
+                </h3>
+                <p className='my-2.5 text-muted-foreground'>
+                  {t.Contact.Email.Subtitle}
+                </p>
+                <Link
+                  aria-label='Send an email to carlosgrjweb@gmail.com'
+                  className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
+                  href='mailto:carlosgrjweb@gmail.com'>
+                  carlosgrjweb@gmail.com
+                </Link>
+              </div>
 
-                {error && (
-                  <p role='alert' className='text-red-600 mt-4'>{error}</p>
-                )}
-                {sent && (
-                  <p role='status' className='text-green-600 mt-4'>
-                    {t.Contact.Form.Success}
-                  </p>
-                )}
+              <div className='flex flex-col items-center sm:items-start'>
+                <div
+                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  aria-hidden='true'>
+                  <PhoneIcon />
+                </div>
+                <h3 className='mt-6 font-semibold text-xl'>
+                  {t.Contact.Phone.Title}
+                </h3>
+                <p className='my-2.5 text-muted-foreground'>
+                  {t.Contact.Phone.Subtitle}
+                </p>
+                <Link
+                  aria-label='Call Carlos at +52 55 8573 9469'
+                  className='font-medium text-gray-950 dark:text-gray-200 hover:underline'
+                  href='tel:+525585739469'>
+                  +52 55 8573 9469
+                </Link>
+              </div>
 
-                <Button
-                  type='submit'
-                  className='mt-6 w-full'
-                  size='lg'
-                  disabled={loading}>
-                  {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              <div className='flex flex-col items-center sm:items-start'>
+                <div
+                  className='h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full'
+                  aria-hidden='true'>
+                  <MessageSquareText />
+                </div>
+                <h3 className='mt-6 font-semibold text-xl'>
+                  {t.Contact.WhatsApp.Title}
+                </h3>
+                <p className='my-2.5 text-muted-foreground'>
+                  {t.Contact.WhatsApp.Subtitle}
+                </p>
+                <Link
+                  aria-label='Start a WhatsApp chat with Carlos'
+                  href='https://wa.me/525585739469'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex gap-2 items-center justify-center w-36 mt-2 px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 text-white font-semibold transition'>
+                  <SiWhatsapp className='w-5 h-5' /> {t.Contact.WhatsApp.Button}
+                </Link>
+              </div>
+            </div>
+
+            {/* Form */}
+            <Card className='bg-accent shadow-none'>
+              <CardContent className='p-6 md:p-10'>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    noValidate>
+                    <div className='grid md:grid-cols-2 gap-x-8 gap-y-5'>
+                      <FormField
+                        control={form.control}
+                        name='firstName'
+                        render={({ field }) => (
+                          <FormItem className='col-span-2 sm:col-span-1'>
+                            <FormLabel>{t.Contact.Form.FirstName}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={t.Contact.Form.FirstName}
+                                className='bg-white h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='lastName'
+                        render={({ field }) => (
+                          <FormItem className='col-span-2 sm:col-span-1'>
+                            <FormLabel>{t.Contact.Form.LastName}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={t.Contact.Form.LastName}
+                                className='bg-white h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='email'
+                        render={({ field }) => (
+                          <FormItem className='col-span-2'>
+                            <FormLabel>{t.Contact.Form.Email}</FormLabel>
+                            <FormControl>
+                              <Input
+                                type='email'
+                                placeholder={t.Contact.Form.Email}
+                                className='bg-white h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='message'
+                        render={({ field }) => (
+                          <FormItem className='col-span-2'>
+                            <FormLabel>{t.Contact.Form.Message}</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder={t.Contact.Form.Message}
+                                className='bg-white shadow-none'
+                                rows={6}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <div className='col-span-2'>
+                        <Turnstile
+                          turnstileSiteKey={
+                            process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
+                          }
+                          callback={(token) => setTurnstileToken(token)}
+                          theme='light'
+                          size='normal'
+                          retry='auto'
+                          refreshExpired='auto'
+                        />
+                      </div>
+                    </div>
+
+                    <Button
+                      type='submit'
+                      className='mt-6 w-full'
+                      size='lg'
+                      disabled={loading}>
+                      {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
+                    </Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
       </div>
     </section>
   );
