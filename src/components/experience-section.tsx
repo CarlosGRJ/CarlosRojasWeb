@@ -21,7 +21,12 @@ export default function ExperienceSection() {
               <h3 className='mt-1 text-lg font-semibold text-foreground'>
                 {exp.role}
               </h3>
-              <p className='text-sm text-muted-foreground mb-3'>{exp.company}</p>
+              <p className='text-sm text-muted-foreground'>{exp.company}</p>
+              {exp.metric && (
+                <p className='mt-2 mb-3 inline-block rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground'>
+                  {exp.metric}
+                </p>
+              )}
 
               <ul className='list-disc list-outside pl-4 space-y-1.5 text-sm text-muted-foreground'>
                 {exp.descriptions.map((desc) => (

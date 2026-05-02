@@ -69,6 +69,7 @@
         "date": "Jul 2025 - Presente",
         "role": "Desarrollador Full Stack Senior",
         "company": "Tavant (contratista para Realtor.com)",
+        "metric": "Automatización de rendimiento · CI/CD · ↑ cobertura de pruebas",
         "descriptions": [
           {
             "id": "TAVANT1",
@@ -97,6 +98,7 @@
         "date": "Sep 2024 - Feb 2025",
         "role": "Desarrollador Frontend",
         "company": "The Home Depot (a través de The Adecco Group)",
+        "metric": "E-commerce de alto tráfico · React + GraphQL",
         "descriptions": [
           {
             "id": "THD1",
@@ -121,6 +123,7 @@
         "date": "Oct 2021 – Sep 2024",
         "role": "Ingeniero Líder de Software",
         "company": "Indra",
+        "metric": "Lideré equipo de 7 · 3 clientes enterprise",
         "descriptions": [
           {
             "id": "Idr1",
@@ -145,6 +148,7 @@
         "date": "Jul 2020 – Jul 2021",
         "role": "Desarrollador Full Stack",
         "company": "Tich Solutions",
+        "metric": "Implementación de SSO · SPAs con React & Angular",
         "descriptions": [
           {
             "id": "TchS1",
