@@ -5,6 +5,7 @@ import { Hero1 } from '@/components/hero1';
 import { Hero34 } from '@/components/hero34';
 import SkillsSection from '@/components/skills-section';
 import ServicesSection from '@/components/service-section';
+import ProcessSection from '@/components/process-section';
 import ExperienceSection from '@/components/experience-section';
 import PortfolioSection from '@/components/portfolio-section';
 import { useTranslation } from '@/context/TranslationProvider';
@@ -39,6 +40,8 @@ export default function Home() {
       <SkillsSection />
 
       <ServicesSection />
+
+      <ProcessSection />
 
       <ExperienceSection />
 

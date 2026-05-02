@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { FadeIn } from '@/components/ui/fade-in';
 import { projects } from '@/constants/projectsData';
 import { ProjectCategory, ProjectItem } from '@/types/portfolio';
 import PortfolioDialog from './ui/porfolio-dialog';
@@ -38,7 +40,9 @@ export default function PortfolioSection() {
   return (
     <section id='portfolio' className='bg-muted/40'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center'>
-        <h2 className='sec-title mb-12 md:mb-16'>{t.Header.Portfolio}</h2>
+        <FadeIn className='w-full text-center'>
+          <h2 className='sec-title mb-12 md:mb-16'>{t.Header.Portfolio}</h2>
+        </FadeIn>
 
         <fieldset className='flex flex-wrap justify-center gap-2 mb-8 border-0 p-0 m-0'>
           <legend className='sr-only'>{t.Portfolio.FilterByCategory}</legend>
@@ -68,14 +72,20 @@ export default function PortfolioSection() {
         )}
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full'>
+          <AnimatePresence mode='popLayout'>
           {filteredProjects.map((project, index) => {
             const techs = parseTechStack(project.techStack);
             const visibleTechs = techs.slice(0, 4);
             const remainingCount = techs.length - 4;
 
             return (
-              <article
+              <motion.article
                 key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
                 className='bg-background border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col overflow-hidden'>
                 <button
                   type='button'
@@ -140,9 +150,10 @@ export default function PortfolioSection() {
                     </Button>
                   </div>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
+          </AnimatePresence>
         </div>
 
         {selectedProject && (

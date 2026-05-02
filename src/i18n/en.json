@@ -7,6 +7,7 @@
     "About": "About me",
     "Skills": "Skills",
     "Services": "Services",
+    "Process": "Process",
     "Experience": "Experience",
     "Portfolio": "Portfolio",
     "Contact": "Contact me"
@@ -58,6 +59,36 @@
         "id": "cms",
         "title": "CMS Integration or Admin Dashboards",
         "desc": "Admin tools to update your site with no code. Firebase, headless CMS, or custom-made interfaces using React or Next.js."
+      }
+    ]
+  },
+  "Process": {
+    "Title": "How I Work",
+    "Steps": [
+      {
+        "id": "discover",
+        "title": "Discover",
+        "desc": "Understand the problem, goals, and constraints. Ask the right questions before writing a single line of code."
+      },
+      {
+        "id": "architect",
+        "title": "Architect",
+        "desc": "Plan the solution — data flow, component structure, API contracts, and tech choices. Decide what not to build."
+      },
+      {
+        "id": "build",
+        "title": "Build",
+        "desc": "Write clean, typed, maintainable code in short iterations. Collaborate early and surface blockers fast."
+      },
+      {
+        "id": "test",
+        "title": "Test",
+        "desc": "Unit, integration, and manual testing. Catch issues before users do and keep quality gates strong."
+      },
+      {
+        "id": "ship",
+        "title": "Ship",
+        "desc": "Deploy confidently with CI/CD, monitoring in place, and a clear rollback plan if anything goes wrong."
       }
     ]
   },

@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from '@/context/TranslationProvider';
+import { FadeIn } from '@/components/ui/fade-in';
 
 export default function ExperienceSection() {
   const { t } = useTranslation();
@@ -8,11 +9,14 @@ export default function ExperienceSection() {
   return (
     <section id='experience'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center justify-center'>
-        <h2 className='sec-title mb-12 md:mb-16'>{t.Experience.Title}</h2>
+        <FadeIn className='w-full text-center'>
+          <h2 className='sec-title mb-12 md:mb-16'>{t.Experience.Title}</h2>
+        </FadeIn>
 
         <ol className='relative w-full max-w-3xl border-l-2 border-border space-y-10'>
-          {t.Experience.List.map((exp) => (
-            <li key={exp.id} className='relative pl-8'>
+          {t.Experience.List.map((exp, index) => (
+            <FadeIn key={exp.id} delay={index * 0.1}>
+            <li className='relative pl-8'>
               <span className='absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-primary ring-4 ring-background' />
 
               <time className='text-xs font-medium text-muted-foreground uppercase tracking-wide'>
@@ -34,6 +38,7 @@ export default function ExperienceSection() {
                 ))}
               </ul>
             </li>
+            </FadeIn>
           ))}
         </ol>
       </div>

@@ -7,6 +7,7 @@
     "About": "Sobre mí",
     "Skills": "Habilidades",
     "Services": "Servicios",
+    "Process": "Proceso",
     "Experience": "Experiencia",
     "Portfolio": "Portafolio",
     "Contact": "Contacto"
@@ -58,6 +59,36 @@
         "id": "cms",
         "title": "Paneles de Administración y CMS Personalizados",
         "desc": "Desarrollo paneles administrativos o integro CMS sin código para que puedas gestionar tu contenido fácilmente sin depender de un desarrollador."
+      }
+    ]
+  },
+  "Process": {
+    "Title": "Cómo Trabajo",
+    "Steps": [
+      {
+        "id": "discover",
+        "title": "Descubrir",
+        "desc": "Entender el problema, los objetivos y las restricciones. Hacer las preguntas correctas antes de escribir una sola línea de código."
+      },
+      {
+        "id": "architect",
+        "title": "Diseñar",
+        "desc": "Planificar la solución: flujo de datos, estructura de componentes, contratos de API y elección de tecnologías. Decidir qué no construir."
+      },
+      {
+        "id": "build",
+        "title": "Construir",
+        "desc": "Código limpio, tipado y mantenible en iteraciones cortas. Colaborar desde el inicio y resolver bloqueos rápidamente."
+      },
+      {
+        "id": "test",
+        "title": "Probar",
+        "desc": "Pruebas unitarias, de integración y manuales. Detectar problemas antes que los usuarios y mantener la calidad."
+      },
+      {
+        "id": "ship",
+        "title": "Lanzar",
+        "desc": "Deploy confiable con CI/CD, monitoreo activo y un plan de rollback claro si algo falla."
       }
     ]
   },

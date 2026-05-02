@@ -12,6 +12,7 @@ import { SiWhatsapp } from 'react-icons/si';
 import { toast } from 'sonner';
 
 import { useTranslation } from '@/context/TranslationProvider';
+import { FadeIn } from '@/components/ui/fade-in';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -115,11 +116,13 @@ const Contact02Page = () => {
   };
 
   return (
-    <section id='contact'>
-      <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-        <h2 className='sec-title mb-12 md:mb-16'>{t.Contact.Title}</h2>
+    <section id='contact' className='bg-muted/40'>
+      <div className='mx-auto w-full max-w-[1920px] px-4 sm:px-20 pt-16 pb-16 sm:pb-20'>
+        <FadeIn className='w-full text-center'>
+          <h2 className='sec-title mb-12 md:mb-16'>{t.Contact.Title}</h2>
+        </FadeIn>
 
-        <div className='w-full max-w-5xl'>
+        <div className='max-w-5xl mx-auto mt-0'>
           <div className='text-center sm:text-start'>
             <p className='text-3xl md:text-4xl font-bold tracking-tight'>
               {t.Contact.Headline}
@@ -129,8 +132,122 @@ const Contact02Page = () => {
             </p>
           </div>
 
-          <div className='mt-10 grid lg:grid-cols-[1fr_2fr] gap-10 items-start'>
-            <ul className='space-y-6' aria-label={t.Contact.Title}>
+          <div className='mt-10 flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_2fr] lg:items-start'>
+            <Card className='bg-accent shadow-none lg:order-last'>
+              <CardContent className='p-4 sm:p-6 md:p-10'>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    aria-busy={loading}
+                    noValidate>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5'>
+                      <FormField
+                        control={form.control}
+                        name='firstName'
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t.Contact.Form.FirstName}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={t.Contact.Form.FirstName}
+                                className='bg-background h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='lastName'
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t.Contact.Form.LastName}</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={t.Contact.Form.LastName}
+                                className='bg-background h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='email'
+                        render={({ field }) => (
+                          <FormItem className='md:col-span-2'>
+                            <FormLabel>{t.Contact.Form.Email}</FormLabel>
+                            <FormControl>
+                              <Input
+                                type='email'
+                                placeholder={t.Contact.Form.Email}
+                                className='bg-background h-11 shadow-none'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='message'
+                        render={({ field }) => (
+                          <FormItem className='md:col-span-2'>
+                            <FormLabel>{t.Contact.Form.Message}</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder={t.Contact.Form.Message}
+                                className='bg-background shadow-none'
+                                rows={6}
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <div className='md:col-span-2'>
+                        <div className='w-fit mx-auto md:mx-0'>
+                          <Turnstile
+                            key={turnstileKey}
+                            turnstileSiteKey={
+                              process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
+                            }
+                            callback={(token) => setTurnstileToken(token)}
+                            theme='auto'
+                            size='normal'
+                            retry='auto'
+                            refreshExpired='auto'
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button
+                      type='submit'
+                      className='mt-6 w-full'
+                      size='lg'
+                      disabled={loading}>
+                      {loading && (
+                        <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />
+                      )}
+                      {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
+                    </Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+
+            <ul className='space-y-6 lg:order-first' aria-label={t.Contact.Title}>
               <li className='flex items-start gap-3'>
                 <div
                   className='mt-0.5 h-8 w-8 shrink-0 flex items-center justify-center bg-primary/10 text-primary rounded-full'
@@ -194,118 +311,6 @@ const Contact02Page = () => {
                 </div>
               </li>
             </ul>
-
-            <Card className='bg-accent shadow-none'>
-              <CardContent className='p-6 md:p-10'>
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    aria-busy={loading}
-                    noValidate>
-                    <div className='grid md:grid-cols-2 gap-x-8 gap-y-5'>
-                      <FormField
-                        control={form.control}
-                        name='firstName'
-                        render={({ field }) => (
-                          <FormItem className='col-span-2 sm:col-span-1'>
-                            <FormLabel>{t.Contact.Form.FirstName}</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder={t.Contact.Form.FirstName}
-                                className='bg-background h-11 shadow-none'
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name='lastName'
-                        render={({ field }) => (
-                          <FormItem className='col-span-2 sm:col-span-1'>
-                            <FormLabel>{t.Contact.Form.LastName}</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder={t.Contact.Form.LastName}
-                                className='bg-background h-11 shadow-none'
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name='email'
-                        render={({ field }) => (
-                          <FormItem className='col-span-2'>
-                            <FormLabel>{t.Contact.Form.Email}</FormLabel>
-                            <FormControl>
-                              <Input
-                                type='email'
-                                placeholder={t.Contact.Form.Email}
-                                className='bg-background h-11 shadow-none'
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name='message'
-                        render={({ field }) => (
-                          <FormItem className='col-span-2'>
-                            <FormLabel>{t.Contact.Form.Message}</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder={t.Contact.Form.Message}
-                                className='bg-background shadow-none'
-                                rows={6}
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <div className='col-span-2'>
-                        <Turnstile
-                          key={turnstileKey}
-                          turnstileSiteKey={
-                            process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''
-                          }
-                          callback={(token) => setTurnstileToken(token)}
-                          theme='auto'
-                          size='normal'
-                          retry='auto'
-                          refreshExpired='auto'
-                        />
-                      </div>
-                    </div>
-
-                    <Button
-                      type='submit'
-                      className='mt-6 w-full'
-                      size='lg'
-                      disabled={loading}>
-                      {loading && (
-                        <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />
-                      )}
-                      {loading ? t.Contact.Form.Sending : t.Contact.Form.Send}
-                    </Button>
-                  </form>
-                </Form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

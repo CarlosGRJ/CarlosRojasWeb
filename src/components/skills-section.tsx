@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils';
 import { skillCategories } from '@/constants/skillsData';
 import { useTranslation } from '@/context/TranslationProvider';
+import { FadeIn } from '@/components/ui/fade-in';
 
 export default function SkillsSection() {
   const { t } = useTranslation();
@@ -10,10 +11,13 @@ export default function SkillsSection() {
   return (
     <section id='skills' aria-labelledby='skills-title'>
       <div className='mx-auto w-full max-w-[1920px] px-8 sm:px-20 pt-16 pb-16 sm:pb-20 flex flex-col items-center'>
-      <h2 id='skills-title' className='sec-title mb-12 md:mb-16'>
-        {t.Skills.Title}
-      </h2>
+      <FadeIn className='w-full text-center'>
+        <h2 id='skills-title' className='sec-title mb-12 md:mb-16'>
+          {t.Skills.Title}
+        </h2>
+      </FadeIn>
 
+      <FadeIn delay={0.1} className='w-full'>
       <div className='w-full overflow-hidden rounded-[14px] border bg-card'>
         {skillCategories.map((category, i) => (
           <div
@@ -56,6 +60,7 @@ export default function SkillsSection() {
           </div>
         ))}
       </div>
+      </FadeIn>
       </div>
     </section>
   );

@@ -14,6 +14,7 @@ const SECTION_IDS = [
   'about',
   'skills',
   'services',
+  'process',
   'experience',
   'portfolio',
   'contact',

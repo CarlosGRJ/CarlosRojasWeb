@@ -21,6 +21,7 @@ const NAV_LINKS = [
   { id: 'about', labelKey: 'About' },
   { id: 'skills', labelKey: 'Skills' },
   { id: 'services', labelKey: 'Services' },
+  { id: 'process', labelKey: 'Process' },
   { id: 'experience', labelKey: 'Experience' },
   { id: 'portfolio', labelKey: 'Portfolio' },
   { id: 'contact', labelKey: 'Contact' },
