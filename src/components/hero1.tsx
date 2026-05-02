@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Download } from 'lucide-react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useTranslation } from '@/context/TranslationProvider';
 
@@ -92,6 +93,12 @@ const Hero1 = ({
                   </Link>
                 </Button>
               )}
+              <Button asChild variant='outline' className='w-full sm:w-auto'>
+                <a href='/Carlos_Rojas_CV.pdf' download>
+                  <Download className='size-4' aria-hidden='true' />
+                  {t.Home.DownloadCV}
+                </a>
+              </Button>
               {buttons.secondary && (
                 <Button asChild variant='outline' className='w-full sm:w-auto'>
                   <Link

@@ -24,25 +24,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Carlos Rojas | Full-Stack Developer',
   description:
-    "Hi, I'm Carlos Rojas — a full-stack developer from Mexico City with 6+ years building web apps and AI-powered products using React, Next.js, Node.js, and TypeScript.",
+    'Full-stack developer from Mexico City with 6+ years building web apps and AI-powered products using React, Next.js, Node.js, and TypeScript.',
   authors: [
     { name: 'Carlos Gerardo Rojas Jaime', url: 'https://www.carlosrojasj.dev' },
   ],
   creator: 'Carlos Rojas',
-  generator: 'Next.js',
-  keywords: [
-    'Carlos Rojas',
-    'Carlos Gerardo Rojas Jaime',
-    'Full-Stack Developer',
-    'Frontend Developer',
-    'Desarrollador Full Stack',
-    'React Developer',
-    'Next.js Developer',
-    'Node.js Developer',
-    'TypeScript Developer',
-    'Web Developer Mexico',
-    'Freelance Developer',
-  ],
   metadataBase: new URL('https://www.carlosrojasj.dev'),
   openGraph: {
     title: 'Carlos Rojas | Full-Stack Developer',
@@ -104,7 +90,15 @@ const jsonLd = {
   name: 'Carlos Rojas',
   alternateName: 'Carlos Gerardo Rojas Jaime',
   url: 'https://www.carlosrojasj.dev',
+  image: 'https://www.carlosrojasj.dev/images/carlos-avatar.webp',
   jobTitle: 'Full-Stack Developer',
+  worksFor: { '@type': 'Organization', name: 'Tavant' },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Mexico City',
+    addressCountry: 'MX',
+  },
+  knowsLanguage: ['en', 'es'],
   sameAs: [
     'https://www.linkedin.com/in/carlosgrj/',
     'https://github.com/CarlosGRJ',
