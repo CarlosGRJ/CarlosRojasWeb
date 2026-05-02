@@ -23,6 +23,7 @@
   },
   "About": {
     "Title": "Sobre Mí",
+    "ImageAlt": "Carlos trabajando de forma remota con café",
     "Description": "Hola, soy Carlos, desarrollador full stack de aplicaciones web y móviles, con base en la Ciudad de México. Me especializo en construir soluciones escalables y de alto rendimiento, con código limpio y un fuerte enfoque en la experiencia del usuario.\n\nHe trabajado en empresas como Realtor, The Home Depot, Indra y Tich Solutions, participando en proyectos que van desde plataformas de comercio electrónico hasta sistemas empresariales. He liderado equipos frontend, colaborado en entornos internacionales y desarrollado componentes reutilizables y listos para producción usando tecnologías como React, Next.js, Node.js, TypeScript, GraphQL y SCSS.\n\nMe importa la calidad del código, el rendimiento y el diseño. Disfruto resolver problemas complejos y dar vida a ideas a través de soluciones bien pensadas, eficientes y mantenibles.\n\nConstruyamos algo increíble juntos."
   },
   "Services": {

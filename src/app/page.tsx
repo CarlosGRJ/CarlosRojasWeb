@@ -34,7 +34,7 @@ export default function Home() {
         }}
       />
 
-      <Hero34 description={t.About.Description} />
+      <Hero34 />
 
       <SkillsSection />
 

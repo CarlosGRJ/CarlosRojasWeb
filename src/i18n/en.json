@@ -23,6 +23,7 @@
   },
   "About": {
     "Title": "About Me",
+    "ImageAlt": "Carlos working remotely with coffee",
     "Description": "Hi, I’m Carlos, a full-stack web and mobile developer based in Mexico City. I specialize in building scalable, high-performance applications with clean code and a strong focus on user experience.\n\nWith experience at companies like Realtor, The Home Depot, Indra, and Tich Solutions, I’ve worked on projects ranging from e-commerce platforms to enterprise systems. I’ve led frontend teams, collaborated in international environments, and built reusable, production-ready components using technologies like React, Next.js, Node.js, TypeScript, GraphQL, and SCSS.\n\nI care deeply about code quality, performance, and design. I enjoy solving complex problems and bringing ideas to life through thoughtful, efficient, and maintainable solutions.\n\nLet’s build something amazing together."
   },
   "Services": {
